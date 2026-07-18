@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FNG Construction — Construction Services in Los Angeles, CA</title>
+<meta name="description" content="FNG Construction provides professional construction services in Los Angeles, CA. Call (818) 201-6584 for a free estimate.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Cormorant Garamond', serif;color:#333;background:#f5f0f0;line-height:1.6;}
+nav{position:sticky;top:0;background:#6c1d2e;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+nav .logo{color:#fff;font-weight:800;font-size:1.3rem;}
+nav .nav-links a{color:#d4a0a0;text-decoration:none;margin-left:25px;font-size:0.95rem;font-weight:500;transition:color 0.3s;}
+nav .nav-links a:hover{color:#6c1d2e;}
+nav .nav-phone{color:#6c1d2e;text-decoration:none;font-weight:700;font-size:1rem;}
+.hero{min-height:auto;}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh;}
+.hero-text{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;background:#f5f0f0;}
+.hero-visual{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px;}
+.hero-stat{text-align:center;margin:20px 0;}
+.stat-big{font-size:3rem;font-weight:800;color:#fff;display:block;}
+.stat-label{font-size:1rem;color:rgba(255,255,255,0.8);}
+.hero-badge{display:inline-block;background:#a23b4e30;color:#6c1d2e;padding:6px 16px;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:20px;}
+.hero-badge-light{display:inline-block;background:rgba(255,255,255,0.2);color:#fff;padding:6px 16px;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:20px;}
+.hero h1{font-size:3rem;font-weight:800;color:#6c1d2e;margin-bottom:15px;line-height:1.1;}
+.hero-tagline{font-size:1.2rem;color:#666;margin-bottom:30px;max-width:500px;}
+.hero-tagline-light{font-size:1.3rem;color:#d4a0a0;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto;}
+.hero-cta,.hero-cta-centered{display:flex;gap:15px;flex-wrap:wrap;align-items:center;}
+.hero-cta-centered{justify-content:center;}
+.btn-primary{background:#6c1d2e;color:#fff;padding:14px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform 0.3s;}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-secondary{background:transparent;color:#6c1d2e;border:2px solid #6c1d2e;padding:12px 34px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem;}
+.btn-light{background:#6c1d2e;color:#fff;padding:14px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1.1rem;}
+.btn-outline-light{background:transparent;color:#fff;border:2px solid #fff;padding:12px 34px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1.1rem;}
+.hero-centered{padding:100px 20px;text-align:center;}
+.hero-content-centered{max-width:800px;margin:0 auto;}
+.hero-fullwidth{padding:100px 20px;text-align:center;}
+.hero-content-full{max-width:800px;margin:0 auto;padding-bottom:40px;}
+.hero-bar{margin-top:40px;}
+.hero-angled{padding:0;}
+.hero-angled-bg{padding:120px 20px;text-align:center;min-height:60vh;display:flex;flex-direction:column;justify-content:center;}
+.hero-angled-content{max-width:700px;margin:0 auto;}
+.section{padding:80px 20px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-title{font-size:2.2rem;font-weight:800;color:#6c1d2e;text-align:center;margin-bottom:15px;}
+.section-subtitle{text-align:center;color:#888;font-size:1.1rem;margin-bottom:50px;max-width:600px;margin-left:auto;margin-right:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.service-card:hover{transform:translateY(-4px);}
+.about{background:#fff;padding:80px 20px;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.about h2{font-size:2rem;color:#6c1d2e;margin-bottom:20px;}
+.about p{color:#666;font-size:1.1rem;line-height:1.8;margin-bottom:15px;}
+.stats-row{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap;}
+.stat-item{color:#6c1d2e;}
+.stat-item strong{font-size:2.5rem;font-weight:800;display:block;}
+.stat-item span{font-size:0.95rem;color:#888;}
+.why-us{padding:80px 20px;background:#f5f0f0;}
+.why-us-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1200px;margin:0 auto;}
+.why-card{text-align:center;padding:30px;}
+.why-card .why-icon{width:60px;height:60px;background:#a23b4e15;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 15px;}
+.why-card h3{color:#6c1d2e;font-size:1.2rem;margin-bottom:8px;}
+.why-card p{color:#888;font-size:0.95rem;}
+.contact{background:#6c1d2e;padding:80px 20px;}
+.contact-inner{max-width:800px;margin:0 auto;text-align:center;}
+.contact h2{color:#fff;font-size:2.2rem;margin-bottom:15px;}
+.contact p{color:#d4a0a0;font-size:1.1rem;margin-bottom:40px;}
+.contact-phone{display:inline-block;background:#6c1d2e;color:#fff;padding:18px 50px;border-radius:8px;text-decoration:none;font-size:1.3rem;font-weight:700;margin-bottom:30px;}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:600px;margin:0 auto;text-align:left;}
+.contact-form input,.contact-form textarea,.contact-form select{padding:14px;border:none;border-radius:8px;font-family:'Cormorant Garamond', serif;font-size:1rem;width:100%;}
+.contact-form textarea{grid-column:1/-1;min-height:120px;resize:vertical;}
+.contact-form button{grid-column:1/-1;background:#6c1d2e;color:#fff;padding:16px;border:none;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;font-family:'Cormorant Garamond', serif;}
+footer{background:#6c1d2e;padding:40px 20px;text-align:center;}
+footer h3{color:#fff;font-size:1.3rem;margin-bottom:10px;}
+footer p{color:rgba(255,255,255,0.6);font-size:0.9rem;margin:5px 0;}
+footer a{color:#6c1d2e;text-decoration:none;}
+@media(max-width:768px){
+.hero-split{grid-template-columns:1fr;}
+.hero-text{padding:50px 25px;text-align:center;}
+.hero-visual{padding:40px;min-height:200px;}
+.hero h1{font-size:2rem;}
+.about-inner{grid-template-columns:1fr;text-align:center;}
+.contact-form{grid-template-columns:1fr;}
+nav{flex-direction:column;gap:10px;}
+nav .nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+nav .nav-links a{margin:0;}
+}
+</style>
+</head>
+<body>
+<nav>
+    <a href="#" class="logo">FNG</a>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:818201-6584" class="nav-phone">(818) 201-6584</a>
+</nav>
+
+
+        <section class="hero hero-minimal" style="background:#f5f0f0;padding:120px 20px;text-align:center;">
+            <div style="max-width:700px;margin:0 auto;">
+                <div style="width:60px;height:4px;background:#a23b4e;margin:0 auto 30px;border-radius:2px;"></div>
+                <h1 style="color:#6c1d2e;font-size:3rem;font-weight:800;margin:0 0 20px;">FNG Construction</h1>
+                <p style="color:#888;font-size:1.3rem;margin-bottom:40px;">Construction professionals serving Los Angeles, CA</p>
+                <a href="tel:818201-6584" style="background:#6c1d2e;color:#fff;padding:16px 48px;border-radius:0;text-decoration:none;font-size:1.1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:inline-block;">📞 (818) 201-6584</a>
+            </div>
+        </section>
+
+<section class="section" id="services">
+    <div class="section-inner">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional construction services for homes and businesses in Los Angeles and surrounding areas.</p>
+        <div class="services-grid">
+            
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:none solid #a23b4e;border-left:4px solid #a23b4e">
+            <div class="service-icon" style="width:50px;height:50px;background:#a23b4e20;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🔨</div>
+            <h3 style="color:#6c1d2e;font-size:1.3rem;margin:0 0 10px;font-weight:700;">New Construction</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Custom home and commercial building from the ground up</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:none solid #a23b4e;border-left:4px solid #a23b4e">
+            <div class="service-icon" style="width:50px;height:50px;background:#a23b4e20;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">⚡</div>
+            <h3 style="color:#6c1d2e;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Remodeling</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Kitchen, bathroom, and whole-home renovations</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:none solid #a23b4e;border-left:4px solid #a23b4e">
+            <div class="service-icon" style="width:50px;height:50px;background:#a23b4e20;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🛠️</div>
+            <h3 style="color:#6c1d2e;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Additions</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Room additions and second-story expansions</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:none solid #a23b4e;border-left:4px solid #a23b4e">
+            <div class="service-icon" style="width:50px;height:50px;background:#a23b4e20;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🏠</div>
+            <h3 style="color:#6c1d2e;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Demolition</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Safe, efficient demolition and site preparation</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:none solid #a23b4e;border-left:4px solid #a23b4e">
+            <div class="service-icon" style="width:50px;height:50px;background:#a23b4e20;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🚧</div>
+            <h3 style="color:#6c1d2e;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Concrete</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Driveways, patios, foundations, and hardscaping</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-inner">
+        <div>
+            <h2>About FNG Construction</h2>
+            <p>We are a locally owned and operated construction business serving Los Angeles and the greater Los Angeles area. With years of experience, we deliver quality workmanship on every project.</p>
+            <p>From small repairs to full installations, we handle it all. Licensed, insured, and committed to customer satisfaction.</p>
+            <div class="stats-row">
+                <div class="stat-item"><strong>100+</strong><span>Projects Completed</span></div>
+                <div class="stat-item"><strong>5★</strong><span>Customer Rating</span></div>
+                <div class="stat-item"><strong>24/7</strong><span>Available</span></div>
+            </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#a23b4e,#d4a0a0);min-height:300px;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:#fff;">
+                <div style="font-size:4rem;margin-bottom:10px;">🎨</div>
+                <p style="font-size:1.2rem;font-weight:600;">Serving Los Angeles</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-us">
+    <div class="section-inner">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-us-grid">
+            <div class="why-card"><div class="why-icon">⭐</div><h3>Licensed & Insured</h3><p>Fully licensed and insured for your protection</p></div>
+            <div class="why-card"><div class="why-icon">🚀</div><h3>Fast Response</h3><p>Quick turnaround and emergency service available</p></div>
+            <div class="why-card"><div class="why-icon">💰</div><h3>Free Estimates</h3><p>No-obligation quotes on all projects</p></div>
+            <div class="why-card"><div class="why-icon">✅</div><h3>Quality Work</h3><p>Precision workmanship on every single job</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <h2>Get Your Free Quote</h2>
+        <p>Call us now or fill out the form below — we'll get back to you within 24 hours.</p>
+        <a href="tel:818201-6584" class="contact-phone">📞 (818) 201-6584</a>
+        <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you! We will contact you shortly.');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address" style="grid-column:1/-1;" required>
+            <select style="grid-column:1/-1;"><option>Select a Service</option><option>New Construction</option><option>Remodeling</option><option>Additions</option><option>Demolition</option><option>Concrete</option></select>
+            <textarea placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">Request Free Quote</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <h3>FNG Construction</h3>
+    <p>Construction Services • Los Angeles, CA</p>
+    <p>📞 <a href="tel:818201-6584">(818) 201-6584</a></p>
+    <p>Licensed • Insured • Free Estimates</p>
+</footer>
+</body>
+</html>
