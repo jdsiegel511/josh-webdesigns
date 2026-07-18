@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVT Construction - Fine Custom Builders & Remodelers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lato', sans-serif; color: #2d1a12; background: #fffdfa; line-height: 1.7; }
+        
+        /* Sticky Luxury Header */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(43, 29, 22, 0.95); border-bottom: 2px solid #b45309;
+            padding: 20px 6%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; color: #fffdfa; letter-spacing: 1px; }
+        .logo span { color: #d97706; }
+        nav a { text-decoration: none; color: #fffdfa; margin-left: 25px; font-weight: 400; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover { color: #d97706; }
+        .nav-phone { border: 1px solid #d97706; padding: 8px 18px; border-radius: 2px; color: #d97706 !important; }
+        .nav-phone:hover { background: #d97706; color: #fffdfa !important; }
+
+        /* Stacked Cards Hero Section */
+        .hero {
+            background: linear-gradient(rgba(43, 29, 22, 0.9), rgba(43, 29, 22, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600') center/cover;
+            padding: 130px 6% 160px;
+            text-align: center;
+            color: #fffdfa;
+            position: relative;
+        }
+        .hero-inner { max-width: 850px; margin: 0 auto; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+        .hero h1 i { font-weight: 400; font-style: italic; color: #d97706; }
+        .hero p { font-size: 1.15rem; color: #dfc39a; margin-bottom: 35px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .hero-btn { display: inline-block; background: #b45309; color: #fffdfa; text-decoration: none; padding: 16px 36px; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; }
+        .hero-btn:hover { background: #d97706; transform: translateY(-2px); }
+
+        /* Floating Overlapping Badges on Hero bottom border */
+        .stacked-cards-container {
+            max-width: 1100px; margin: -60px auto 0; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+            position: relative; z-index: 100;
+        }
+        .stacked-card {
+            background: #ffffff; border-radius: 4px; padding: 35px 25px;
+            box-shadow: 0 15px 35px rgba(43, 29, 22, 0.08);
+            border: 1px solid #fffdfa; border-top: 4px solid #b45309; text-align: center;
+        }
+        .stacked-card h4 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #2d1a12; margin-bottom: 10px; }
+        .stacked-card p { font-size: 0.9rem; color: #6b5a50; }
+
+        /* Luxury Services Grid */
+        .services { padding: 120px 6% 90px; background: #fffdfa; }
+        .sec-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .sec-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #2d1a12; margin-bottom: 15px; }
+        .sec-header p { color: #8c7365; font-size: 1.05rem; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .service-card { background: #ffffff; padding: 45px 35px; border: 1px solid #ebd9cb; transition: all 0.3s; position: relative; }
+        .service-card:hover { transform: translateY(-5px); border-color: #b45309; box-shadow: 0 10px 25px rgba(180, 83, 9, 0.1); }
+        .service-card-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: rgba(180, 83, 9, 0.15); position: absolute; top: 15px; right: 25px; font-weight: 700; }
+        .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #2d1a12; margin-bottom: 15px; }
+        .service-card p { color: #6b5a50; font-size: 0.95rem; }
+
+        /* Elegant About Section with Stats integrated */
+        .about { padding: 90px 6%; background: #2d1a12; color: #fffdfa; }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #dfc39a; margin-bottom: 25px; }
+        .about-text p { color: #ebd9cb; margin-bottom: 20px; font-size: 1.05rem; }
+        .about-stats { display: flex; flex-direction: column; gap: 20px; }
+        .about-stat { border-bottom: 1px solid #b45309; padding-bottom: 15px; }
+        .about-stat h3 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #dfc39a; line-height: 1; }
+        .about-stat p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #ebd9cb; }
+
+        /* Contact Luxurious section */
+        .contact { padding: 100px 6%; background: #fffdfa; }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; }
+        .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #2d1a12; margin-bottom: 20px; }
+        .contact-info p { color: #6b5a50; font-size: 1.05rem; margin-bottom: 30px; }
+        .luxury-phone { display: inline-block; text-decoration: none; font-family: 'Playfair Display', serif; font-size: 2rem; color: #b45309; font-weight: 700; border-bottom: 2px solid #b45309; padding-bottom: 5px; margin-bottom: 30px; transition: color 0.3s; }
+        .luxury-phone:hover { color: #d97706; }
+        
+        .contact-form { background: #2d1a12; color: #fffdfa; padding: 45px; border-radius: 2px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); border: 1px solid #b45309; }
+        .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #dfc39a; margin-bottom: 25px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: #dfc39a; }
+        .form-control { width: 100%; padding: 13px; background: rgba(255,255,255,0.05); border: 1px solid #ebd9cb; color: #fffdfa; font-family: inherit; }
+        .form-control:focus { outline: none; border-color: #dfc39a; background: rgba(255,255,255,0.1); }
+        .submit-btn { display: block; width: 100%; background: #b45309; color: white; border: none; padding: 15px; font-family: 'Playfair Display', serif; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; }
+        .submit-btn:hover { background: #d97706; }
+
+        /* Footer */
+        footer { background: #1a0f0a; color: #6b5a50; padding: 50px 6%; text-align: center; border-top: 2px solid #b45309; }
+        footer a { color: #dfc39a; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .stacked-cards-container { grid-template-columns: 1fr; margin-top: 20px; }
+            .about-inner, .contact-inner { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LVT <span>Construction</span></div>
+        <nav>
+            <a href="#services">Architecture</a>
+            <a href="#about">Tenure</a>
+            <a href="tel:18185544513" class="nav-phone">Call (818) 554-4513</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Fine Custom Home <i>Carpentry & Structural Building</i></h1>
+            <p>Creating prestige residential properties and highly custom architectural expansions in Panorama City, CA.</p>
+            <a href="tel:18185544513" class="hero-btn">Consult Our Craftsmen</a>
+        </div>
+    </section>
+
+    <div class="stacked-cards-container">
+        <div class="stacked-card">
+            <h4>Residential Estate Building</h4>
+            <p>Premium modern estates constructed from foundation to finished fine cabinetry.</p>
+        </div>
+        <div class="stacked-card">
+            <h4>High-End Additions</h4>
+            <p>Seam-free structural extensions, custom second-stories, and detached master guest quarters.</p>
+        </div>
+        <div class="stacked-card">
+            <h4>Interior Carpentry</h4>
+            <p>Earthy fireplace mantels, architectural wall paneling, and floating solid oak staircases.</p>
+        </div>
+    </div>
+
+    <section id="services" class="services">
+        <div class="sec-header">
+            <h2>Our Architectural Capabilities</h2>
+            <p>LVT Construction integrates engineering expertise with master woodworking detailing on every build.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-num">I</div>
+                <h3>Custom Remodeling</h3>
+                <p>Luxurious culinary kitchens, spa-tier baths, and custom library builds configured with exotic woods and refined finishes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-num">II</div>
+                <h3>Seismic ADU Construction</h3>
+                <p>Maximize your property value with seismically compliant detached custom guest units, complete with self-contained utilities.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card-num">III</div>
+                <h3>Artisanal Timber Framing</h3>
+                <p>Gorgeous exposed timber beams, custom outdoor loggias, structural pergolas, and fine redwood porch decking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>A Masterclass In Building</h2>
+                <p>At LVT Construction, we operate under the rigorous standard of European-level wood craftsmanship combined with California structural engineering specifications.</p>
+                <p>Our founder launched LVT Construction with a vision of preserving master custom finish-carpentry on Panorama City projects. Every detail of framing, millwork, and stucco is reviewed for perfection.</p>
+            </div>
+            <div class="about-stats">
+                <div class="about-stat">
+                    <h3>20+ Years</h3>
+                    <p>Of Custom Architectural Craftsmanship</p>
+                </div>
+                <div class="about-stat">
+                    <h3>$12M+</h3>
+                    <p>Fine Residential Assets Engineered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-info">
+                <h2>Initiate Your Dream Build</h2>
+                <p>Our architects and finish experts are available for individual layout consulting. Share your blueprints, and let's craft a timeless asset.</p>
+                <a href="tel:18185544513" class="luxury-phone">(818) 554-4513</a>
+                <p style="font-size: 0.95rem; color: #8c7365;">📍 Headquartered in Panorama City, CA. Servicing high-end properties across the San Fernando Valley.</p>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('We have received your request and will schedule an architectural consult.');">
+                    <h3>Schedule Project Consult</h3>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Phone</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Estimated Budget / Scale</label>
+                        <select class="form-control">
+                            <option>$50,000 - $150,000</option>
+                            <option>$150,000 - $500,000</option>
+                            <option>$500,000+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Begin Consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LVT Construction. Fine Custom Carpentry & Architectural Contracting. Panorama City, CA.</p>
+    </footer>
+</body>
+</html>
