@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #fff; padding: 0; }
+.google-page { max-width: 680px; margin: 0 auto; padding: 20px; }
+.search-bar {
+    display: flex; align-items: center; gap: 12px;
+    border: 1px solid #dfe1e5; border-radius: 24px;
+    padding: 12px 20px; margin-bottom: 24px;
+    background: #fff;
+}
+.search-bar .google-logo { font-size: 24px; font-weight: bold; }
+.search-bar .google-logo .blue { color: #4285f4; }
+.search-bar .google-logo .red { color: #ea4335; }
+.search-bar .google-logo .yellow { color: #fbbc05; }
+.search-bar .google-logo .green { color: #34a853; }
+.search-input { flex: 1; font-size: 16px; color: #202124; }
+.search-results { }
+.sponsored-label {
+    font-size: 12px; color: #70757a; margin-bottom: 8px; padding-left: 4px;
+}
+.ad-result {
+    border: 1px solid #dadce0; border-radius: 12px;
+    padding: 20px; margin-bottom: 16px;
+    background: #fff;
+    position: relative;
+}
+.ad-badge {
+    display: inline-block; background: #ecfdf3; color: #056c43;
+    font-size: 11px; font-weight: 600; padding: 2px 10px;
+    border-radius: 4px; margin-bottom: 12px; text-transform: uppercase;
+}
+.ad-url {
+    font-size: 14px; color: #202124; margin-bottom: 4px;
+    display: flex; align-items: center; gap: 8px;
+}
+.ad-url .favicon {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: linear-gradient(135deg, #1a3c34, #2d5f4f);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 10px; font-weight: bold; flex-shrink: 0;
+}
+.ad-title {
+    font-size: 20px; color: #1a0dab; font-weight: 400;
+    margin-bottom: 6px; cursor: default;
+}
+.ad-title:hover { text-decoration: underline; }
+.ad-description {
+    font-size: 14px; color: #4d5156; line-height: 1.58;
+    margin-bottom: 10px;
+}
+.ad-extensions {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+.ad-extension {
+    font-size: 13px; color: #1a0dab; display: flex; align-items: center; gap: 6px;
+}
+.ad-extension .icon { font-size: 16px; }
+.callout-box {
+    background: #f8f9fa; border: 1px solid #e8eaed;
+    border-radius: 8px; padding: 10px 16px; margin-top: 12px;
+    font-size: 13px; color: #5f6368;
+    display: flex; align-items: center; gap: 8px;
+}
+.locked-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.97);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 1000;
+}
+.locked-overlay .lock-icon { font-size: 48px; margin-bottom: 16px; }
+.locked-overlay h2 { font-size: 22px; color: #1a3c34; margin-bottom: 8px; }
+.locked-overlay p { font-size: 15px; color: #666; text-align: center; max-width: 400px; line-height: 1.6; }
+.locked-overlay .preview-note {
+    margin-top: 20px; padding: 16px 24px; background: #f0f7f4;
+    border-radius: 12px; font-size: 14px; color: #1a3c34;
+}
+</style>
+</head>
+<body>
+<div class="google-page">
+    <div class="search-bar">
+        <div class="google-logo">
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
+        <div class="search-input">landscaping in Los Angeles ca</div>
+    </div>
+    
+    <div class="search-results">
+        <div class="sponsored-label">Sponsored</div>
+        
+        <div class="ad-result">
+            <div class="ad-badge">Ad</div>
+            <div class="ad-url">
+                <div class="favicon">W</div>
+                www.wildlandscape.com
+            </div>
+            <div class="ad-title">Wild Landscape — Landscaping in Los Angeles</div>
+            <div class="ad-description">
+                Professional landscaping services in Los Angeles, CA. Licensed, insured, and trusted by local homeowners.
+                Free estimates. Same-day service available. Call now for a quote!
+            </div>
+            <div class="ad-extensions">
+                <div class="ad-extension"><span class="icon">📞</span> Call (323) 555-0104</div>
+                <div class="ad-extension"><span class="icon">⭐</span> 5.0 (24 reviews)</div>
+                <div class="ad-extension"><span class="icon">✅</span> Licensed & Insured</div>
+                <div class="ad-extension"><span class="icon">📍</span> Serving Los Angeles</div>
+            </div>
+            <div class="callout-box">
+                💡 <strong>Get a Free Estimate Today</strong> — Professional landscaping you can trust.
+            </div>
+        </div>
+        
+        <div class="sponsored-label" style="margin-top:20px;">Sponsored</div>
+        <div class="ad-result">
+            <div class="ad-badge">Ad</div>
+            <div class="ad-url">
+                <div class="favicon">W</div>
+                www.wildlandscape.com/services
+            </div>
+            <div class="ad-title">Wild Landscape — Top-Rated Landscaping Near You</div>
+            <div class="ad-description">
+                Looking for reliable landscaping in Los Angeles? We handle everything from small repairs to full projects.
+                Quality workmanship. Competitive pricing. 100% satisfaction guaranteed.
+            </div>
+            <div class="ad-extensions">
+                <div class="ad-extension"><span class="icon">🏆</span> Best of Los Angeles 2026</div>
+                <div class="ad-extension"><span class="icon">⏰</span> Open Now</div>
+                <div class="ad-extension"><span class="icon">💬</span> Get Quote Online</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="locked-overlay">
+    <div class="lock-icon">🔒</div>
+    <h2>This Is What Your Google Ad Could Look Like</h2>
+    <p>This is a preview of how your business would appear at the top of Google search results
+    with a professionally managed Google Ads campaign.</p>
+    <div class="preview-note">
+        📈 <strong>Want this for your business?</strong><br>
+        Google Ads management starts at $2,000/month or $75/lead.<br>
+        Call Josh at (310) 850-1789 to get started.
+    </div>
+</div>
+</body>
+</html>
