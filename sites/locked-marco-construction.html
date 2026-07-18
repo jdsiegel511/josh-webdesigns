@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco General Construction - Website Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .preview-container { position: relative; overflow: hidden; }
+        .blurred-preview {
+            filter: blur(12px);
+            pointer-events: none;
+            user-select: none;
+            min-height: 100vh;
+        }
+        .lock-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+        .lock-card {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .lock-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .lock-card h1 {
+            color: #1a3c34;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .lock-card p {
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .price-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #1a3c34;
+            font-size: 2.5rem;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .pay-button {
+            display: inline-block;
+            background: #ff8f00;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(255,143,0,0.4);
+            margin-bottom: 20px;
+        }
+        .pay-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,143,0,0.5);
+        }
+        .features {
+            text-align: left;
+            margin: 25px 0;
+            padding: 0 20px;
+        }
+        .features li {
+            list-style: none;
+            padding: 8px 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .features li::before {
+            content: "✅ ";
+        }
+        .contact-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        .demo-banner {
+            background: #1a3c34;
+            color: #8a9b94;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+        /* Fake website content for blur effect */
+        .fake-hero {
+            background: linear-gradient(135deg, #1a3c34 0%, #2d5f4f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .fake-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .fake-hero p { font-size: 1.2rem; opacity: 0.9; }
+        .fake-section { padding: 50px 20px; background: #f8f9fa; text-align: center; }
+        .fake-section h2 { font-size: 2rem; color: #1a3c34; margin-bottom: 20px; }
+        .fake-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
+        .fake-card { background: white; padding: 30px; border-radius: 10px; }
+        .fake-card h3 { color: #1a3c34; margin-bottom: 10px; }
+        .fake-card p { color: #999; }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">🔒 Preview locked — Complete payment to unlock your full website</div>
+    
+    <div class="preview-container">
+        <div class="blurred-preview">
+            <div class="fake-hero">
+                <h1>Marco General Construction</h1>
+                <p>Remodeling, Painting, Plumbing & Home Renovations in Los Angeles</p>
+            </div>
+            <div class="fake-section">
+                <h2>Our Services</h2>
+                <div class="fake-cards">
+                    <div class="fake-card"><h3>Service One</h3><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                    <div class="fake-card"><h3>Service Two</h3><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                    <div class="fake-card"><h3>Service Three</h3><p>Lorem ipsum dolor sit amet consectetur.</p></div>
+                </div>
+            </div>
+            <div class="fake-section" style="background: white;">
+                <h2>Why Choose Us</h2>
+                <p>Professional service you can trust in Los Angeles</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="lock-overlay">
+        <div class="lock-card">
+            <div class="lock-icon">🔒</div>
+            <h1>Your Website Is Ready!</h1>
+            <p>We've built a custom, professional website for <strong>Marco General Construction</strong>. It's fully functional, mobile-friendly, and ready to go live.</p>
+            <div class="price-tag">$1,000</div>
+            <ul class="features">
+                <li>Custom design with your branding</li>
+                <li>Mobile-responsive layout</li>
+                <li>SEO setup for Google ranking</li>
+                <li>Contact form & click-to-call</li>
+                <li>Your photos & project gallery</li>
+            </ul>
+            <a href="https://checkout.stripe.com/c/pay/cs_test_a1TLzu4qdy9rSxPuFJOVDOXmK7MJlRvV3nqhTzNA5OxaQ4XulcUjYnTgpY#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdicGRmZGhqaWBTZHdsZGtxJz8nZmprcXdqaScpJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRRcFFXY0dAT3ZdM1xnQG5uS1JGaGtTdE5CUlZifzN%2FRm93c2pGQmE0f1RKfFRWbjN8cjFpZmxJVkxnSkJ0bFFNN0pIbnAzaU09dzA0amlQc2Jpf3ZuTmc1NU8ycFJgX0ZfJyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJmNjY2NjYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="pay-button">Pay $1,000 & Unlock Website →</a>
+            <p style="font-size: 0.9rem; color: #999;">Secure payment via Stripe. You'll get instant access to your website after payment.</p>
+            <div class="contact-info">
+                Questions? Contact Josh Siegel<br>
+                📧 jdsiegel511@webdesigninfos.com
+            </div>
+        </div>
+    </div>
+</body>
+</html>
