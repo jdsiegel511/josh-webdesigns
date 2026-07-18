@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverGreen Construction Group - Panorama City Builders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Nunito', sans-serif; color: #2e5b82; background: #f4f8fb; line-height: 1.6; }
+        
+        /* Sticky Header */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: #ffffff; border-bottom: 3px solid #4682B4;
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 1.5rem; color: #4682B4; letter-spacing: -1px; }
+        .logo span { color: #ff7f50; }
+        nav a { text-decoration: none; color: #2e5b82; margin-left: 20px; font-weight: 700; }
+        nav a:hover { color: #ff7f50; }
+        .nav-cta { color: #ff7f50 !important; border: 2px solid #ff7f50; padding: 6px 14px; border-radius: 4px; transition: all 0.2s; }
+        .nav-cta:hover { background: #ff7f50; color: white !important; }
+
+        /* Retro Minimalist Centered Hero */
+        .hero {
+            padding: 110px 5%; text-align: center;
+            background: #ffffff; border-bottom: 6px solid #4682B4;
+        }
+        .hero-inner { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-family: 'Raleway', sans-serif; font-size: 3.8rem; font-weight: 900; color: #2e5b82; line-height: 1.1; margin-bottom: 25px; letter-spacing: -1px; }
+        .hero h1 span { color: #ff7f50; }
+        .hero p { font-size: 1.2rem; color: #475569; margin-bottom: 35px; }
+        .hero-cta { display: inline-block; background: #ff7f50; color: white; text-decoration: none; padding: 16px 36px; border-radius: 4px; font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 1.1rem; border: 2px solid #ff7f50; box-shadow: 4px 4px 0px #2e5b82; transition: all 0.2s; }
+        .hero-cta:hover { background: white; color: #ff7f50; transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #2e5b82; }
+
+        /* Trust bar with outline */
+        .trust { padding: 25px 5%; background: #eef5fa; border-bottom: 2px solid #cbd5e1; }
+        .trust-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
+        .trust-card { font-weight: 700; color: #2e5b82; font-family: 'Raleway', sans-serif; }
+
+        /* Services grid with steel blue and orange outline */
+        .services { padding: 90px 5%; }
+        .sec-title { text-align: center; font-family: 'Raleway', sans-serif; font-size: 2.5rem; font-weight: 900; color: #2e5b82; margin-bottom: 50px; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .service-card { background: white; border: 3px solid #2e5b82; border-radius: 4px; padding: 35px 25px; box-shadow: 4px 4px 0px #4682B4; transition: all 0.2s; }
+        .service-card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0px #ff7f50; }
+        .service-icon { font-size: 2.2rem; margin-bottom: 15px; }
+        .service-card h3 { font-family: 'Raleway', sans-serif; font-size: 1.35rem; font-weight: 900; margin-bottom: 12px; }
+        .service-card p { color: #475569; font-size: 0.95rem; }
+
+        /* About & Floating Circle Stats */
+        .about { padding: 90px 5%; background: #ffffff; border-top: 6px solid #2e5b82; border-bottom: 6px solid #2e5b82; }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+        .about-text h2 { font-family: 'Raleway', sans-serif; font-size: 2.3rem; font-weight: 900; margin-bottom: 20px; }
+        .about-text p { color: #475569; margin-bottom: 20px; font-size: 1.05rem; }
+        .stats-circles { display: flex; justify-content: space-around; gap: 20px; }
+        .stat-circle { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #ff7f50; background: #f4f8fb; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 4px 4px 0px #2e5b82; }
+        .stat-circle h4 { font-family: 'Raleway', sans-serif; font-size: 1.8rem; font-weight: 900; color: #2e5b82; line-height: 1; }
+        .stat-circle p { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #475569; margin-top: 5px; }
+
+        /* Contact Section double line border form */
+        .contact { padding: 90px 5%; }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-left h2 { font-family: 'Raleway', sans-serif; font-size: 2.3rem; font-weight: 900; margin-bottom: 20px; }
+        .contact-left p { color: #475569; margin-bottom: 30px; }
+        .phone-button { display: inline-block; background: #2e5b82; color: white; padding: 14px 28px; border-radius: 4px; font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 1.3rem; text-decoration: none; box-shadow: 4px 4px 0px #ff7f50; transition: all 0.2s; }
+        .phone-button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #ff7f50; }
+        
+        .contact-form { background: white; border: 4px double #2e5b82; padding: 40px; border-radius: 4px; box-shadow: 6px 6px 0px #4682B4; }
+        .contact-form h3 { font-family: 'Raleway', sans-serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 20px; }
+        .form-control { width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #2e5b82; border-radius: 4px; font-family: inherit; }
+        .form-control:focus { outline: none; border-color: #ff7f50; }
+        .btn-submit { display: block; width: 100%; background: #ff7f50; border: 2px solid #ff7f50; color: white; padding: 14px; font-family: 'Raleway', sans-serif; font-weight: 900; cursor: pointer; border-radius: 4px; box-shadow: 4px 4px 0px #2e5b82; transition: all 0.2s; }
+        .btn-submit:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #2e5b82; }
+
+        /* Footer */
+        footer { background: #2e5b82; color: #eef5fa; padding: 40px 5%; text-align: center; }
+        footer a { color: #ff7f50; text-decoration: none; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .about-inner, .contact-inner { grid-template-columns: 1fr; }
+            .stats-circles { flex-direction: column; align-items: center; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Ever<span>Green</span> Group</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="tel:18888858543" class="nav-cta">(888) 885-8543</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Dynamic General Contracting & <span>Building Renovations</span></h1>
+            <p>We approach construction with structured engineering and dynamic layouts. Panorama City's preferred commercial and home builders.</p>
+            <a href="tel:18888858543" class="hero-cta">Claim Free Site Inspection</a>
+        </div>
+    </section>
+
+    <div class="trust">
+        <div class="trust-grid">
+            <div class="trust-card">⚡ Licensed B-Contractor</div>
+            <div class="trust-card">⚡ Full Architectural Liability</div>
+            <div class="trust-card">⚡ Flat Upfront Estimates</div>
+        </div>
+    </div>
+
+    <section id="services" class="services">
+        <h2 class="sec-title">What We Engineer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Structural Shells</h3>
+                <p>Heavy duty foundation layouts, steel beam frames, load bearing wood structures, and complete seismically compliant framework.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏡</div>
+                <h3>Interior Fitouts</h3>
+                <p>High velocity home transformations, custom kitchens, premium bathrooms, ADU additions, and general cabinetry repairs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🪵</div>
+                <h3>Exterior Hardscapes</h3>
+                <p>Premium concrete driveway laying, heavy timber fencing, custom redwood deck building, and structural garden terraces.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>Eco-Structural Building Specialists</h2>
+                <p>EverGreen Construction Group provides Panorama City and San Fernando Valley with safe, dynamic, energy efficient construction layouts.</p>
+                <p>We work in collaboration with leading architects and local municipal inspectors to deliver your home upgrades cleanly, under strict safety control, and within budget parameters.</p>
+            </div>
+            <div class="stats-circles">
+                <div class="stat-circle">
+                    <h4>150+</h4>
+                    <p>Projects Built</p>
+                </div>
+                <div class="stat-circle">
+                    <h4>100%</h4>
+                    <p>Safe Audited</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <h2>Connect With Our Team</h2>
+                <p>Need custom construction, framing, or interior fitouts? Enter your request or speak with our planning director right now.</p>
+                <a href="tel:18888858543" class="phone-button">Call (888) 885-8543</a>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Request submitted! Our structural surveyor will reach out within 24 hours.');">
+                    <h3>Project Survey Request</h3>
+                    <input type="text" class="form-control" placeholder="Contact Name" required>
+                    <input type="tel" class="form-control" placeholder="Contact Phone" required>
+                    <textarea class="form-control" placeholder="Project Description (e.g. ADU Frame)" rows="3"></textarea>
+                    <button type="submit" class="btn-submit">Submit Survey Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EverGreen Construction Group. Panorama City, CA. All Licensed Rights Reserved.</p>
+    </footer>
+</body>
+</html>
