@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Electric - Avant-Garde Power</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --midnight: #111111;
+            --silver: #E0E0E0;
+            --light-silver: #F5F5F5;
+            --medium-gray: #888888;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--midnight);
+            background: var(--white);
+            line-height: 1.5;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(17,17,17,0.98);
+            padding: 20px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-syne {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.7rem;
+            color: var(--white);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: -2px;
+        }
+        .logo-syne span { color: var(--medium-gray); }
+        .nav-syne-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        .nav-syne-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        .nav-syne-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--silver);
+            transition: width 0.3s;
+        }
+        .nav-syne-links a:hover::after {
+            width: 100%;
+        }
+        
+        header {
+            background: var(--midnight);
+            color: var(--white);
+            padding: 120px 5% 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .hero-syne-left {
+            flex: 1.3;
+        }
+        .hero-syne-left h1 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 5rem;
+            line-height: 0.95;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+            text-transform: lowercase;
+        }
+        .hero-syne-left h1 span { color: var(--medium-gray); }
+        .hero-syne-left p {
+            font-size: 1.2rem;
+            color: var(--silver);
+            max-width: 600px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        .syne-btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--midnight);
+            padding: 15px 35px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            transition: background 0.2s;
+        }
+        .syne-btn:hover {
+            background: var(--silver);
+        }
+        .hero-syne-right {
+            flex: 0.7;
+            border-left: 2px solid rgba(255,255,255,0.2);
+            padding-left: 40px;
+        }
+        .hero-syne-right h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .services-syne {
+            padding: 100px 5%;
+        }
+        .services-syne h2 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            letter-spacing: -3px;
+            text-transform: lowercase;
+            margin-bottom: 60px;
+        }
+        .services-syne-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        .service-syne-card {
+            border-top: 1px solid var(--midnight);
+            padding-top: 25px;
+        }
+        .service-syne-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+        .service-syne-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .about-syne {
+            background: var(--light-silver);
+            padding: 100px 5%;
+        }
+        .about-syne-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-syne-text {
+            flex: 1.2;
+        }
+        .about-syne-text h2 {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            letter-spacing: -3px;
+            text-transform: lowercase;
+            margin-bottom: 30px;
+        }
+        .about-syne-text p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .about-syne-sidebar {
+            flex: 0.8;
+            border-top: 10px solid var(--midnight);
+            padding-top: 30px;
+        }
+        .about-syne-sidebar h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .contact-syne {
+            background: var(--midnight);
+            color: var(--white);
+            padding: 100px 5%;
+        }
+        .contact-syne-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 100px;
+        }
+        .contact-syne-left {
+            flex: 1;
+        }
+        .contact-syne-left h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 4rem;
+            letter-spacing: -3px;
+            text-transform: lowercase;
+            margin-bottom: 30px;
+        }
+        .contact-syne-phone {
+            display: inline-block;
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Syne', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin: 20px 0;
+            letter-spacing: -1px;
+        }
+        .contact-syne-right {
+            flex: 1.2;
+        }
+        .input-syne {
+            width: 100%;
+            padding: 15px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .input-syne:focus {
+            outline: none;
+            border-bottom-color: var(--white);
+        }
+        .submit-syne {
+            background: var(--white);
+            color: var(--midnight);
+            border: none;
+            padding: 18px 40px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: opacity 0.3s;
+        }
+        .submit-syne:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #000000;
+            color: rgba(255,255,255,0.3);
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 992px) {
+            header { flex-direction: column; text-align: center; }
+            .hero-syne-right { border-left: none; padding-left: 0; }
+            .about-syne-wrap { flex-direction: column; }
+            .contact-syne-grid { flex-direction: column; }
+        }
+        @media (max-width: 768px) {
+            .nav-syne-links { display: none; }
+            .hero-syne-left h1 { font-size: 3.2rem; letter-spacing: -2px; }
+            .services-syne h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo-syne">CS <span>Electric</span></a>
+        <ul class="nav-syne-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Philosophy</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:(310) 679-7225" style="font-weight:700;">(310) 679-7225</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-syne-left">
+            <h1>progressive <span>power</span> layouts</h1>
+            <p>We craft architectural electrical configurations, safety solutions, and smart panel layouts for developers and luxury residences in Hawthorne.</p>
+            <a href="#contact" class="syne-btn">Request Service Estimate</a>
+        </div>
+        <div class="hero-syne-right">
+            <h4>the code</h4>
+            <p style="color:var(--medium-gray)">We view electrical wiring as a structured grid of high fidelity infrastructure. Minimal layout. Zero defects. Maximum load stability.</p>
+        </div>
+    </header>
+    <section class="services-syne" id="services">
+        <h2>available systems</h2>
+        <div class="services-syne-list">
+            <div class="service-syne-card">
+                <h3>smart controls</h3>
+                <p>Architectural lighting loops, scene planning, cloud integrated breaker interfaces, and modern smart relay modules fitted dynamically.</p>
+            </div>
+            <div class="service-syne-card">
+                <h3>fault correction</h3>
+                <p>Advanced line isolation diagnostics, rapid response safety triggers, circuit corrections, and certified regulatory reports.</p>
+            </div>
+            <div class="service-syne-card">
+                <h3>EV arrays</h3>
+                <p>Clean charging circuit allocations, load balancing setups, and outdoor mounting of charging solutions aligned with building safety codes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-syne" id="about">
+        <div class="about-syne-wrap">
+            <div class="about-syne-text">
+                <h2>redefining C-10 dynamics</h2>
+                <p>At CS Electric, we reject standard cluttered wire pathways. We believe that clean layouts under panels promote cooler running temperatures, simpler maintenance, and beautiful, solid architectural continuity.</p>
+                <p>Operating in Hawthorne, we integrate with smart building guidelines to build beautiful residential and commercial power blueprints. Safety is structural, execution is art.</p>
+            </div>
+            <div class="about-syne-sidebar">
+                <h3>safe</h3>
+                <h3>clean</h3>
+                <h3>certified</h3>
+            </div>
+        </div>
+    </section>
+    <section class="contact-syne" id="contact">
+        <div class="contact-syne-grid">
+            <div class="contact-syne-left">
+                <h2>begin the design</h2>
+                <p>Initiate panel designs, custom residential loops, or technical inspections.</p>
+                <a href="tel:3106797225" class="contact-syne-phone">📞 (310) 679-7225</a>
+                <p style="color:var(--medium-gray)">📍 cs headquarters, hawthorne, ca</p>
+                <p style="color:var(--medium-gray)">✉ designs@cselectriceffect.com</p>
+            </div>
+            <div class="contact-syne-right">
+                <form onsubmit="event.preventDefault(); alert('CS Electric dispatch notified. We will call you within 15 mins.');">
+                    <input type="text" placeholder="Name" class="input-syne" required>
+                    <input type="tel" placeholder="Phone" class="input-syne" required>
+                    <textarea class="input-syne" rows="3" placeholder="Brief system scope details..."></textarea>
+                    <button type="submit" class="submit-syne">Connect With Team</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 CS Electric | Certified Electrical Infrastructure, Hawthorne, CA.</p>
+    </footer>
+</body>
+</html>
