@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Roofer Los Angeles - Elite Roofing Services LA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate: #2C3E50;
+            --copper: #E67E22;
+            --light-gray: #ECF0F1;
+            --dark-slate: #34495E;
+            --accent-yellow: #F1C40F;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--dark-slate);
+            line-height: 1.6;
+            background: var(--white);
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--slate);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.7rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .brand span { color: var(--copper); }
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--white);
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: var(--copper); }
+        .tel-btn {
+            background: var(--copper);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        .tel-btn:hover { background: var(--white); color: var(--slate) !important; }
+        
+        header {
+            position: relative;
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1632759162444-116d44f77484?w=1600') no-repeat center/cover;
+            height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            color: var(--white);
+        }
+        .hero-inner {
+            max-width: 850px;
+            border: 4px solid var(--copper);
+            padding: 40px 30px;
+            background: rgba(44, 62, 80, 0.4);
+        }
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .cta-pill {
+            display: inline-block;
+            background: var(--copper);
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            transition: transform 0.2s;
+        }
+        .cta-pill:hover {
+            transform: scale(1.05);
+            background: var(--accent-yellow);
+            color: var(--slate);
+        }
+        
+        .grid-section {
+            padding: 80px 5%;
+            background: var(--light-gray);
+        }
+        .sec-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .title-bar {
+            width: 80px;
+            height: 5px;
+            background: var(--copper);
+            margin: 0 auto 50px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grid-card {
+            background: var(--white);
+            padding: 40px 25px;
+            border-top: 5px solid var(--copper);
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .grid-card:hover {
+            transform: translateY(-8px);
+        }
+        .card-icon {
+            font-size: 3rem;
+            color: var(--copper);
+            margin-bottom: 15px;
+        }
+        .grid-card h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .about-split {
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about-img {
+            flex: 1;
+            background: var(--light-gray);
+            height: 350px;
+            border-left: 10px solid var(--slate);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-img h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: var(--copper);
+        }
+        .about-text-panel {
+            flex: 1.2;
+        }
+        .about-text-panel h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .about-text-panel p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-form-section {
+            background: var(--dark-slate);
+            color: var(--white);
+            padding: 80px 5%;
+        }
+        .form-wrap {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .form-wrap h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .form-wrap p {
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            color: var(--light-gray);
+        }
+        .copper-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--light-gray);
+            border-radius: 4px;
+            color: var(--white);
+            font-size: 1rem;
+        }
+        .copper-input:focus {
+            outline: none;
+            border-color: var(--copper);
+        }
+        .submit-copper {
+            width: 100%;
+            padding: 18px;
+            background: var(--copper);
+            color: var(--white);
+            border: none;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .submit-copper:hover {
+            background: var(--accent-yellow);
+            color: var(--slate);
+        }
+        .phone-footer-link {
+            color: var(--copper);
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        footer {
+            background: #1A252F;
+            color: #7F8C8D;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            header h1 { font-size: 2.5rem; }
+            .about-split { flex-direction: column-reverse; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand">Reliable <span>Roofer</span></a>
+        <ul class="nav-menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Our Firm</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(323) 741-5844" class="tel-btn">(323) 741-5844</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-inner">
+            <h1>Reliable Roofer Los Angeles</h1>
+            <p>High-Performance Roofing Systems Built to Endure. Fully Licensed & Insured in Los Angeles.</p>
+            <a href="#contact" class="cta-pill">Get a Free Estimate Now</a>
+        </div>
+    </header>
+    <section class="grid-section" id="services">
+        <h2 class="sec-title">What We Deliver</h2>
+        <div class="title-bar"></div>
+        <div class="grid-container">
+            <div class="grid-card">
+                <div class="card-icon">🛠</div>
+                <h3>Leak Repair & Sealing</h3>
+                <p>Fast diagnostic inspections, emergency protective coverings, and permanent structural waterproofing fixes for any scale leak.</p>
+            </div>
+            <div class="grid-card">
+                <div class="card-icon">🏠</div>
+                <h3>Full Roof Replacements</h3>
+                <p>Expert dismantling of weathered elements and execution of high-tier shingle, modern slate, tile, or metal systems with extended warranties.</p>
+            </div>
+            <div class="grid-card">
+                <div class="card-icon">🏗</div>
+                <h3>Commercial Upkeep</h3>
+                <p>Structured maintenance schedules, cool-roof coating applications, and flat roofing solutions custom-built for LA businesses.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-split" id="about">
+        <div class="about-img">
+            <h4>SAFE.</h4>
+            <h4>DEPENDABLE.</h4>
+            <h4>ON TIME.</h4>
+        </div>
+        <div class="about-text-panel">
+            <h2>Serving Los Angeles Roofing Needs with Pride</h2>
+            <p>At Reliable Roofer Los Angeles, we bring industrial-grade standards directly to your residential or commercial structure. We understand that a roof is your property's primary shield, which is why we never compromise on safety, materials, or procedural care.</p>
+            <p>Our team holds strict licensing and comprehensive insurance profiles. We maintain a zero-incident safety record and are committed to complete clean-up protocols upon completion.</p>
+        </div>
+    </section>
+    <section class="contact-form-section" id="contact">
+        <div class="form-wrap">
+            <h2>Schedule a Professional Roofing Inspection</h2>
+            <p>Ready to lock in your project or request an expert roof health assessment? Complete the query below or dial our office directly.</p>
+            <form onsubmit="event.preventDefault(); alert('Request received. Our roofing inspectors will call you shortly!');">
+                <input type="text" class="copper-input" placeholder="Your Name" required>
+                <input type="tel" class="copper-input" placeholder="Your Phone Number" required>
+                <textarea class="copper-input" rows="4" placeholder="Briefly describe your roofing project or problem..."></textarea>
+                <button type="submit" class="submit-copper">Send Request</button>
+            </form>
+            <a href="tel:3237415844" class="phone-footer-link">Or Call: (323) 741-5844</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Reliable Roofer Los Angeles | Roofing Contracting, Los Angeles, CA. Licensed CSLB.</p>
+    </footer>
+</body>
+</html>
