@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Flow Homes - Luxury Architecture & Remodeling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pine-green: #1B4332;
+            --emerald: #40916C;
+            --soft-sage: #D8F3DC;
+            --cream-linen: #F4F9F4;
+            --deep-pine: #081C15;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--deep-pine);
+            background: var(--cream-linen);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--soft-sage);
+            padding: 20px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo-green {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 1.7rem;
+            color: var(--pine-green);
+            text-decoration: none;
+        }
+        .brand-logo-green span { color: var(--emerald); }
+        .nav-links-green {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links-green a {
+            color: var(--pine-green);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links-green a:hover { color: var(--emerald); }
+        .green-pill {
+            background: var(--pine-green);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .green-pill:hover {
+            background: var(--emerald);
+        }
+        
+        header {
+            display: flex;
+            min-height: 600px;
+            background: var(--white);
+            border-bottom: 1px solid var(--soft-sage);
+        }
+        .hero-left-split {
+            flex: 1;
+            background: var(--pine-green);
+            color: var(--white);
+            padding: 100px 8% 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-left-split h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-left-split h1 span { color: var(--soft-sage); }
+        .hero-left-split p {
+            font-size: 1.15rem;
+            color: var(--cream-linen);
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+        .btn-sage {
+            display: inline-block;
+            background: var(--soft-sage);
+            color: var(--pine-green);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-sage:hover {
+            background: var(--white);
+            transform: translateY(-1px);
+        }
+        .hero-right-split {
+            flex: 1;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cream-linen);
+        }
+        .hero-right-inner-green {
+            background: var(--white);
+            border: 1px solid var(--soft-sage);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(27,67,50,0.05);
+            width: 100%;
+            max-width: 450px;
+        }
+        .hero-right-inner-green h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--pine-green);
+        }
+        
+        .services-green {
+            padding: 80px 5%;
+        }
+        .title-green {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--pine-green);
+            margin-bottom: 50px;
+        }
+        .grid-green {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-green {
+            background: var(--white);
+            border-left: 5px solid var(--pine-green);
+            padding: 40px 30px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(27,67,50,0.02);
+        }
+        .card-green:hover {
+            border-left-color: var(--emerald);
+            box-shadow: 0 10px 25px rgba(27,67,50,0.06);
+            transform: translateY(-5px);
+        }
+        .card-green h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--pine-green);
+        }
+        
+        .about-green {
+            background: var(--white);
+            padding: 80px 5%;
+            border-top: 1px solid var(--soft-sage);
+            border-bottom: 1px solid var(--soft-sage);
+        }
+        .about-green-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-green-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--pine-green);
+            margin-bottom: 20px;
+        }
+        .about-green-left p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        .about-green-right {
+            background: var(--cream-linen);
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid var(--soft-sage);
+        }
+        .about-green-right h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--pine-green);
+            margin-bottom: 15px;
+        }
+        
+        .contact-green {
+            padding: 80px 5%;
+        }
+        .contact-green-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-green-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--pine-green);
+            margin-bottom: 20px;
+        }
+        .contact-green-left p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+        .phone-green-link {
+            color: var(--emerald);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .contact-green-right {
+            background: var(--white);
+            border: 1px solid var(--soft-sage);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        .input-green {
+            width: 100%;
+            padding: 12px 18px;
+            border: 1px solid var(--soft-sage);
+            background: var(--cream-linen);
+            border-radius: 4px;
+            color: var(--deep-pine);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .input-green:focus {
+            outline: none;
+            border-color: var(--pine-green);
+            background: var(--white);
+        }
+        
+        footer {
+            background: var(--deep-pine);
+            color: var(--soft-sage);
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 992px) {
+            header { flex-direction: column; }
+            .hero-right-split { width: 100%; }
+            .about-green-inner { grid-template-columns: 1fr; }
+            .contact-green-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links-green { display: none; }
+            .hero-left-split h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand-logo-green">Service Flow <span>Homes</span></a>
+        <ul class="nav-links-green">
+            <li><a href="#services">Design</a></li>
+            <li><a href="#about">Heritage</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(213) 277-6078" class="green-pill">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-left-split">
+            <h1>Fine Architectural <span>Remodeling</span></h1>
+            <p>We craft high-end kitchen additions, dynamic home layouts, custom bathroom suites, and luxury ADU builds in Los Angeles & Los Angeles.</p>
+            <a href="#contact" class="btn-sage">Coordinate Consultation</a>
+        </div>
+        <div class="hero-right-split">
+            <div class="hero-right-inner-green">
+                <h3>Request Pricing Guide</h3>
+                <form onsubmit="event.preventDefault(); alert('Pricing request booked. Our architecture coordinators will reach out.');" style="margin-top:20px;">
+                    <input type="text" placeholder="Your Name" class="input-green" style="margin-bottom:12px;" required>
+                    <input type="tel" placeholder="Your Phone Number" class="input-green" style="margin-bottom:12px;" required>
+                    <button type="submit" class="green-pill" style="width:100%; border:none; padding:15px; cursor:pointer;">Secure Guides</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="services-green" id="services">
+        <h2 class="title-green">Our Architectural Services</h2>
+        <div class="grid-green">
+            <div class="card-green">
+                <h3>Full Remodeling</h3>
+                <p>Meticulous framing re-engineering, structural wall deletion, living area expansions, and fine architectural continuity additions.</p>
+            </div>
+            <div class="card-green">
+                <h3>Kitchen & Bath Upgrades</h3>
+                <p>Luxury bath additions, solid marble backsplashes, custom built cabinetry lines, and professional plumbing adjustments.</p>
+            </div>
+            <div class="card-green">
+                <h3>Accessory Dwelling Units (ADU)</h3>
+                <p>Complete ground-up backyard guest house constructions, garage conversions, permitting permissions, and mechanical loops.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-green" id="about">
+        <div class="about-green-inner">
+            <div class="about-green-left">
+                <h2>Honoring Architectural Spaces</h2>
+                <p>At Service Flow Homes, we bring design-led execution directly to your primary living structure. Serving Los Angeles and Hawthorne with absolute pride, we bridge the gap between creative blueprints and structural reality.</p>
+                <p>We coordinate your permit files, calculate precise structural beams, and coordinate master finish carpenters to promise complete spatial execution.</p>
+            </div>
+            <div class="about-green-right">
+                <h4>CSLB Licensed General</h4>
+                <p style="margin-top:10px; font-size:0.95rem;">Our general construction license is actively in good standing. We enforce maximum liability protections for Hawthorne land structures.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-green" id="contact">
+        <div class="contact-green-inner">
+            <div class="contact-green-left">
+                <h2>Plan Your Design Consultation</h2>
+                <p>We are available for on-site structural inspections, layout planning, and custom carpentry estimates.</p>
+                <a href="tel:2132776078" class="phone-green-link">📞 (213) 277-6078</a>
+                <p>📍 Los Angeles Design Studio, CA</p>
+                <p>✉ Email: build@serviceflowhomes.com</p>
+            </div>
+            <div class="contact-green-right">
+                <form onsubmit="event.preventDefault(); alert('Estimate request logged! We will call you shortly.');">
+                    <input type="text" placeholder="Name" class="input-green" required>
+                    <input type="tel" placeholder="Phone" class="input-green" required>
+                    <textarea class="input-green" rows="4" placeholder="Briefly share your layout expansion or remodeling dreams..."></textarea>
+                    <button type="submit" class="green-pill" style="width:100%; border:none; padding:15px; cursor:pointer;">Initiate Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Service Flow Homes | General Construction & Luxury Remodeling, Los Angeles, CA.</p>
+    </footer>
+</body>
+</html>
