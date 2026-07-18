@@ -294,7 +294,80 @@
             .trust-bar { gap: 24px; }
             .stat-num { font-size: 2rem; }
         }
-    </style>
+    
+        /* ===== RESULTS PROMISE ===== */
+        .promise-section { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: #fff; }
+        .promise-section .section-tag { background: rgba(59,130,246,0.2); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+        .promise-section .section-title { color: #fff; }
+        .promise-section .section-subtitle { color: #94a3b8; }
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        .promise-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .promise-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.1); }
+        .promise-card.promise-hero {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+            border-color: #3b82f6;
+            grid-column: span 1;
+        }
+        @media (min-width: 900px) { .promise-card.promise-hero { grid-column: span 2; } }
+        .promise-icon { font-size: 2rem; margin-bottom: 14px; }
+        .promise-card h3 { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .promise-card p { font-size: 0.93rem; color: #cbd5e1; line-height: 1.7; }
+        .promise-card strong { color: #fff; }
+        .promise-badge {
+            display: inline-block;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .promise-cta-block {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .promise-cta-label {
+            width: 100%;
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+        .btn-lg { padding: 14px 36px; font-size: 1rem; }
+        .btn-outline {
+            display: inline-block;
+            padding: 14px 36px;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+        </style>
 </head>
 <body>
 
@@ -530,11 +603,59 @@
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
+
+<!-- ===== RESULTS PROMISE ===== -->
+<section class="section promise-section" id="results">
+    <div class="section-inner">
+        <span class="section-tag">Our Guarantee</span>
+        <h2 class="section-title">Real Results — Or You Don't Pay</h2>
+        <p class="section-subtitle">I don't just build websites. I build lead machines. Here's exactly what I promise every client.</p>
+        <div class="promise-grid">
+            <div class="promise-card promise-hero">
+                <div class="promise-icon">📞</div>
+                <h3>Calls in 7 Days or It's Free</h3>
+                <p>Your new website goes live within 48 hours. If you haven't received inbound calls or form submissions from Google within 7 days, I'll refund every dollar. No questions asked.</p>
+                <div class="promise-badge">100% Money-Back Guarantee</div>
+            </div>
+            <div class="promise-card">
+                <div class="promise-icon">🎯</div>
+                <h3>Pay Per Lead Model</h3>
+                <p>Don't want to pay upfront for ads? No problem. With my Pay-Per-Lead model you only pay <strong>$75 per confirmed call or form submission</strong>. Zero risk — you pay for results, not promises.</p>
+            </div>
+            <div class="promise-card">
+                <div class="promise-icon">📈</div>
+                <h3>Revenue Share Option</h3>
+                <p>For the right clients, I work on a <strong>revenue share basis</strong> — I generate the leads and the revenue, and we split it. I don't eat until you eat. That's how committed I am to your growth.</p>
+            </div>
+            <div class="promise-card">
+                <div class="promise-icon">⚡</div>
+                <h3>48-Hour Turnaround</h3>
+                <p>Your fully custom, mobile-ready website is built and live within <strong>48 hours</strong> of payment. Most agencies take weeks. I take 2 days — and the quality is better.</p>
+            </div>
+            <div class="promise-card">
+                <div class="promise-icon">🏆</div>
+                <h3>You Own It Forever</h3>
+                <p>No monthly fees. No hosting traps. No surprises. Pay once, own your website forever. I've seen clients get $10k+ months from a single $1,000 investment.</p>
+            </div>
+            <div class="promise-card">
+                <div class="promise-icon">🤝</div>
+                <h3>I'm Your Partner, Not a Vendor</h3>
+                <p>I personally manage every account. You get my direct number, direct email, and real communication — not a ticket system. If something isn't working, I fix it, fast.</p>
+            </div>
+        </div>
+        <div class="promise-cta-block">
+            <p class="promise-cta-label">Ready to see your website before you pay a dime?</p>
+            <a href="#contact" class="btn btn-primary btn-lg">See My Free Preview →</a>
+            <a href="https://calendly.com/jdsiegel511-webdesigninfos/listing-acquisition-dates" target="_blank" class="btn btn-outline btn-lg">Book a Free Call</a>
+        </div>
+    </div>
+</section>
+
 <section class="section testimonials-section" id="testimonials">
     <div class="section-inner">
         <span class="section-tag">Client Reviews</span>
         <h2 class="section-title">What Contractors Say</h2>
-        <p class="section-subtitle">Real feedback from LA-area home service businesses I've worked with.</p>
+        <p class="section-subtitle">Real feedback from LA-area home service businesses I've worked with — their words, not mine.</p>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-stars">★★★★★</div>
