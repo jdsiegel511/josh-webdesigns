@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carl the Plumber, Inc. — Custom Website Preview</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background:#0a0a0a; }
+.preview-blur { filter:blur(8px); pointer-events:none; opacity:0.7; }
+.locked-overlay {
+  position:fixed; top:0; left:0; right:0; bottom:0;
+  background:rgba(10,10,10,0.95);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  z-index:9999; padding:20px; overflow-y:auto;
+}
+.badge {
+  background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.3);
+  padding:6px 16px; border-radius:20px; margin-bottom:24px;
+  display:flex; align-items:center; gap:8px;
+}
+.badge span { font-size:14px; }
+.badge strong { color:#fff; font-size:12px; letter-spacing:0.1em; }
+h1 { color:#fff; font-size:2rem; text-align:center; margin-bottom:12px; }
+p { color:#a0a0a0; font-size:1rem; text-align:center; max-width:500px; line-height:1.7; margin-bottom:24px; }
+.price { font-size:3rem; font-weight:800; color:#3b82f6; margin-bottom:4px; }
+.price-note { color:#6b7280; font-size:0.85rem; margin-bottom:28px; }
+.features { list-style:none; margin-bottom:32px; max-width:400px; }
+.features li { color:#d1d5db; font-size:0.95rem; padding:6px 0; display:flex; align-items:center; gap:10px; }
+.features li::before { content:"✓"; color:#3b82f6; font-weight:bold; }
+.cta {
+  display:inline-block; background:#3b82f6; color:#fff;
+  padding:16px 48px; border-radius:8px; text-decoration:none;
+  font-size:1.1rem; font-weight:700; transition:all 0.2s;
+}
+.cta:hover { background:#2563eb; transform:translateY(-1px); }
+.secondary { margin-top:20px; text-align:center; }
+.secondary a { color:#6b7280; text-decoration:none; font-size:0.9rem; }
+.phone { color:#4b5563; font-size:0.85rem; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="locked-overlay">
+  <div class="badge"><span>🔒</span> <strong>PREVIEW LOCKED</strong></div>
+  <h1>Your Custom Website Is Ready</h1>
+  <p>Carl the Plumber, Inc. — a fully custom, mobile-responsive website built specifically for your business.</p>
+  <div class="price">$1,000 <span class="price-note">one-time</span></div>
+  <ul class="features">
+    <li>Custom design with your branding</li>
+    <li>Mobile responsive</li>
+    <li>SEO optimized</li>
+    <li>Click-to-call integration</li>
+    <li>No monthly fees — you own it</li>
+  </ul>
+  <a href="https://buy.stripe.com/6oU7sN3Jm0MO2FHcRq9R625" class="cta">Unlock Your Website →</a>
+  <div class="secondary">
+    <a href="https://calendly.com/jdsiegel511-webdesigninfos/listing-acquisition-dates" target="_blank">📅 Book a consultation call</a>
+    <div class="phone">Questions? Call Josh: 310-850-1789</div>
+  </div>
+</div>
+</body>
+</html>
