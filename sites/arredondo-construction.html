@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arredondo Construction - General Contracting Los Angeles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Proza Libre', sans-serif; color: #2e1c10; background: #fdfbf7; line-height: 1.7; }
+        
+        /* Sticky Header */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(253, 251, 247, 0.95); border-bottom: 1px solid #dfc39a;
+            padding: 20px 6%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #452a17; }
+        nav a { text-decoration: none; color: #452a17; margin-left: 25px; font-weight: 600; }
+        nav a:hover { color: #854d0e; }
+        .nav-phone { border-bottom: 2px solid #452a17; padding-bottom: 3px; }
+
+        /* Three Column Hero Layout */
+        .hero {
+            background: #fdfbf7; border-bottom: 1px solid #dfc39a; padding: 100px 6%;
+        }
+        .hero-inner {
+            max-width: 1150px; margin: 0 auto;
+            display: grid; grid-template-columns: 0.8fr 1.4fr 0.8fr; gap: 45px; align-items: center;
+        }
+        .hero-badge-col {
+            border: 1px solid #dfc39a; padding: 30px 20px; text-align: center; border-radius: 4px;
+        }
+        .hero-badge-col h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 5px; color: #452a17; }
+        .hero-badge-col p { font-size: 0.85rem; color: #854d0e; }
+        
+        .hero-center-col { text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; line-height: 1.1; font-weight: 700; color: #452a17; margin-bottom: 20px; }
+        .hero p { font-size: 1.1rem; color: #2e1c10; margin-bottom: 30px; }
+        .hero-btn { display: inline-block; background: #452a17; color: #fdfbf7; text-decoration: none; padding: 14px 30px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.15rem; border: 1px solid #452a17; transition: all 0.3s; }
+        .hero-btn:hover { background: transparent; color: #452a17; }
+
+        /* Trust bar simple sand */
+        .trust-bar { text-align: center; padding: 25px; border-bottom: 1px solid #dfc39a; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-style: italic; color: #854d0e; }
+
+        /* Services elegant list */
+        .services { padding: 90px 6%; background: #fdfbf7; }
+        .sec-title { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; color: #452a17; margin-bottom: 50px; }
+        .service-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px; }
+        .service-item { border-bottom: 1px solid #dfc39a; padding-bottom: 25px; display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; }
+        .service-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: #452a17; }
+        .service-item p { color: #2e1c10; font-size: 1rem; }
+
+        /* About & Stats section */
+        .about { padding: 90px 6%; background: #452a17; color: #fdfbf7; }
+        .about-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .about h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: #dfc39a; margin-bottom: 20px; }
+        .about p { color: #fdfbf7; font-size: 1.1rem; max-width: 800px; margin: 0 auto 40px; }
+        .stats-divider { display: flex; justify-content: space-around; max-width: 600px; margin: 0 auto; border-top: 1px solid #dfc39a; padding-top: 30px; }
+        .stat-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; color: #dfc39a; }
+        .stat-item p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Contact elegant brown form */
+        .contact { padding: 90px 6%; background: #fdfbf7; }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; }
+        .contact-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: #452a17; margin-bottom: 20px; }
+        .contact-left p { color: #2e1c10; margin-bottom: 30px; }
+        .luxury-phone { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #452a17; text-decoration: none; font-weight: 700; display: block; margin-bottom: 20px; }
+        
+        .contact-form { background: #452a17; color: #fdfbf7; padding: 45px; border-radius: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .contact-form h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #dfc39a; margin-bottom: 20px; text-align: center; }
+        .form-control { width: 100%; padding: 13px; margin-bottom: 15px; border: 1.5px solid #dfc39a; background: rgba(255,255,255,0.05); color: white; font-family: inherit; }
+        .form-control:focus { outline: none; border-color: #dfc39a; }
+        .submit-btn { display: block; width: 100%; background: #dfc39a; border: none; padding: 14px; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; color: #452a17; cursor: pointer; transition: background 0.3s; }
+        .submit-btn:hover { background: #fffdfa; }
+
+        /* Footer */
+        footer { background: #fdfbf7; color: #2e1c10; padding: 40px 6%; text-align: center; border-top: 1px solid #dfc39a; }
+        footer a { color: #452a17; text-decoration: none; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .hero-inner { grid-template-columns: 1fr !important; }
+            .service-item, .contact-inner { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Arredondo Construction</div>
+        <nav>
+            <a href="#services">Craft</a>
+            <a href="#about">Tenure</a>
+            <a href="tel:13235663375" class="nav-phone">(323) 566-3375</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge-col">
+                <h4>Established</h4>
+                <p>Family Owned since 1995</p>
+            </div>
+            <div class="hero-center-col">
+                <h1>High-End Remodeling & Custom Carpentry</h1>
+                <p>Elegantly structured spaces. Los Angeles' premier builders for culinary kitchens, custom master suites, and frame additions.</p>
+                <a href="tel:13235663375" class="hero-btn">Consult Our Builders</a>
+            </div>
+            <div class="hero-badge-col">
+                <h4>Safety Vetted</h4>
+                <p>Fully Licensed & Insured</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        "Elegance in masonry, frame-level precision, and professional courtesy on every local project"
+    </div>
+
+    <section id="services" class="services">
+        <h2 class="sec-title">Our Capabilities</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Custom Additions</h3>
+                <p>Seismic compliant ADU structures, luxurious second stories, and structural garage conversions designed to match your property's architectural aesthetic.</p>
+            </div>
+            <div class="service-item">
+                <h3>Prestige Remodels</h3>
+                <p>Complete luxury bathroom remodels, architectural millwork, modern library frames, and customized cabinetry designs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Structural Masonry</h3>
+                <p>Earthy fireplace foundations, structural retaining walls, concrete demolition, and detailed stone walkways.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-inner">
+            <h2>Thirty Years Of Building Legacies</h2>
+            <p>At Arredondo Construction, we operate with detailed planning, European finish woodworking, and comprehensive local zoning knowledge. We are ranked in top tiers of California general builders.</p>
+            <p>Our team works cleanly, respects local homeowner rules, and verifies every foundation slab with premium grade level indicators.</p>
+            <div class="stats-divider">
+                <div class="stat-item">
+                    <h4>30+</h4>
+                    <p>Years Tenure</p>
+                </div>
+                <div class="stat-item">
+                    <h4>450+</h4>
+                    <p>Projects Finished</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <h2>Begin Your Architecture Conversation</h2>
+                <p>Ready to draft custom layouts or inspect load parameters? Connect with our project managers for a detailed home review.</p>
+                <a href="tel:13235663375" class="luxury-phone">(323) 566-3375</a>
+                <p style="font-size: 0.95rem; color: #2e1c10;">📍 Serving Los Angeles and luxury surrounding cities.</p>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('We have received your blueprints and will schedule a site walk.');">
+                    <h3>Inquire About Services</h3>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="tel" class="form-control" placeholder="Callback Phone" required>
+                    <textarea class="form-control" placeholder="Project Details (e.g. ADU Build)" rows="3"></textarea>
+                    <button type="submit" class="submit-btn">Begin Inquiries</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Arredondo Construction. Los Angeles, CA. Licensed General Builders.</p>
+    </footer>
+</body>
+</html>
