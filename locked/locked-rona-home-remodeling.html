@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rona Home Remodeling — Website Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; overflow: hidden; }
+        .preview-container { position: relative; width: 100%; height: 100vh; }
+        .lock-overlay {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.65); display: flex; align-items: center;
+            justify-content: center; z-index: 10;
+        }
+        .lock-card {
+            background: white; border-radius: 16px; padding: 40px; max-width: 450px;
+            text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .lock-icon { font-size: 3rem; margin-bottom: 15px; }
+        .lock-card h2 { font-size: 1.6rem; margin-bottom: 10px; color: #1a1a2e; }
+        .lock-card p { color: #666; margin-bottom: 25px; font-size: 1rem; }
+        .lock-price { font-size: 2.5rem; font-weight: 800; color: #3b82f6; margin-bottom: 20px; }
+        .unlock-btn {
+            display: block; background: #3b82f6; color: white; padding: 16px 40px;
+            border-radius: 10px; text-decoration: none; font-size: 1.1rem;
+            font-weight: 700; margin-bottom: 15px;
+        }
+        .preview-note { font-size: 0.85rem; color: #999; }
+        iframe { width: 100%; height: 100%; border: none; filter: blur(12px); pointer-events: none; }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <iframe src="https://base44.app/api/apps/6a5afeeed39adccf0e05b857/files/mp/public/6a5afeeed39adccf0e05b857/fdf102830_rona-home-remodeling.html"></iframe>
+        <div class="lock-overlay">
+            <div class="lock-card">
+                <div class="lock-icon">🔒</div>
+                <h2>Custom Website for Rona Home Remodeling</h2>
+                <p>This is a custom-built website for your home remodeling business. Unlock to see the full design.</p>
+                <div class="lock-price">$1,000</div>
+                <a href="https://buy.stripe.com/bJe28t6VydzA0xz18I9R600" class="unlock-btn" target="_blank">💳 Unlock Full Website</a>
+                <p class="preview-note">Secure payment via Stripe • Website unlocks instantly</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
