@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voicemail Reach — Ringless Voicemail Marketing | Web Design Info</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, Arial, sans-serif; background: #0f172a; color: #f1f5f9; line-height: 1.7; }
+.hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f3460 100%); min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; }
+.hero-content { max-width: 800px; }
+.hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; }
+.hero h1 span { color: #3b82f6; }
+.hero p { font-size: 1.3rem; color: #94a3b8; margin-bottom: 40px; }
+.hero-badge { display: inline-block; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+.nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 100; border-bottom: 1px solid #1e3a5f; }
+.nav-logo { font-weight: 800; font-size: 1.2rem; color: #3b82f6; }
+.nav-phone { color: #94a3b8; font-size: 0.95rem; }
+.nav-phone a { color: #3b82f6; text-decoration: none; font-weight: 600; }
+.pricing { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+.pricing h2 { font-size: 2.4rem; font-weight: 800; text-align: center; margin-bottom: 50px; color: #f1f5f9; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.pricing-card { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 40px 32px; transition: transform 0.2s, border-color 0.2s; }
+.pricing-card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+.pricing-card.featured { border-color: #3b82f6; background: linear-gradient(135deg, #1e293b 0%, #1e3a5f 100%); position: relative; }
+.pricing-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #3b82f6; color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; }
+.card-name { font-size: 1.1rem; font-weight: 700; color: #94a3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+.card-price { font-size: 3rem; font-weight: 800; color: #f1f5f9; margin-bottom: 4px; }
+.card-price span { font-size: 1rem; color: #64748b; font-weight: 400; }
+.card-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 24px; }
+.card-features { list-style: none; margin-bottom: 32px; }
+.card-features li { padding: 8px 0; color: #cbd5e1; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.card-features li::before { content: '✓'; color: #3b82f6; font-weight: 700; }
+.card-cta { display: block; text-align: center; background: #3b82f6; color: white; padding: 14px 24px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: background 0.2s; }
+.card-cta:hover { background: #2563eb; }
+.card-cta.bundle { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); }
+.features { padding: 80px 40px; background: #1e293b; }
+.features-inner { max-width: 1000px; margin: 0 auto; }
+.features h2 { font-size: 2.4rem; font-weight: 800; text-align: center; margin-bottom: 50px; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.feature-item { text-align: center; }
+.feature-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.feature-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; color: #3b82f6; }
+.feature-desc { color: #94a3b8; font-size: 0.95rem; }
+.how { padding: 100px 40px; max-width: 800px; margin: 0 auto; }
+.how h2 { font-size: 2.4rem; font-weight: 800; text-align: center; margin-bottom: 50px; }
+.steps { display: flex; flex-direction: column; gap: 32px; }
+.step { display: flex; gap: 20px; align-items: flex-start; }
+.step-num { flex-shrink: 0; width: 48px; height: 48px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; }
+.step-content h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+.step-content p { color: #94a3b8; }
+.cta-section { padding: 100px 40px; text-align: center; background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); }
+.cta-section h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; }
+.cta-section p { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-btn { display: inline-block; padding: 16px 36px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+.cta-btn.primary { background: #3b82f6; color: white; }
+.cta-btn.secondary { background: transparent; color: #3b82f6; border: 2px solid #3b82f6; }
+.footer { padding: 40px; text-align: center; color: #64748b; border-top: 1px solid #1e293b; }
+.footer a { color: #3b82f6; text-decoration: none; }
+@media (max-width: 768px) { .hero h1 { font-size: 2rem; } .pricing-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="nav">
+    <div class="nav-logo">📞 Voicemail Reach</div>
+    <div class="nav-phone">Call us: <a href="tel:3108501789">310-850-1789</a></div>
+</div>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">⚡ Ringless Voicemail Marketing</div>
+        <h1>Reach <span>117 Businesses</span> Without Lifting the Phone</h1>
+        <p>Automated ringless voicemail campaigns that deliver your message directly to prospects' voicemail boxes — without ringing their phones. No cold calls. No rejection. Just results.</p>
+        <a href="#pricing" class="card-cta" style="display: inline-block; padding: 16px 40px; font-size: 1.1rem;">See Pricing</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="features-inner">
+        <h2>Why Voicemail Reach?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🔇</div>
+                <div class="feature-title">Ringless Delivery</div>
+                <div class="feature-desc">Messages drop straight to voicemail without ringing the phone. No interruptions, no rejected calls.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎙️</div>
+                <div class="feature-title">Professional Voice</div>
+                <div class="feature-desc">AI-enhanced voice recordings with natural delivery. Choose male or female voice. Custom scripts included.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Full Analytics</div>
+                <div class="feature-desc">Track delivery rates, callback rates, and campaign ROI with detailed reporting dashboard.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">A/B Testing</div>
+                <div class="feature-desc">Test multiple scripts and optimize for the best response rate with built-in split testing.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚖️</div>
+                <div class="feature-title">DNC Compliant</div>
+                <div class="feature-desc">Automatic Do-Not-Call list scrubbing ensures legal compliance on every campaign.</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">Instant Deployment</div>
+                <div class="feature-desc">Launch a campaign to hundreds of prospects in minutes. No setup delays.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <div class="card-name">Starter Drop</div>
+            <div class="card-price">$299<span> one-time</span></div>
+            <div class="card-desc">Perfect for testing the waters</div>
+            <ul class="card-features">
+                <li>500 voicemail drops</li>
+                <li>1 custom script</li>
+                <li>Professional voice recording</li>
+                <li>Basic delivery report</li>
+            </ul>
+            <a href="https://buy.stripe.com/cNieVf6Vy678cgh4kU9R602" class="card-cta">Get Started</a>
+        </div>
+        <div class="pricing-card featured">
+            <div class="card-name">Business Boost</div>
+            <div class="card-price">$599<span> one-time</span></div>
+            <div class="card-desc">Best for small business lead gen</div>
+            <ul class="card-features">
+                <li>1,500 voicemail drops</li>
+                <li>3 custom scripts (A/B test)</li>
+                <li>Professional voice recording</li>
+                <li>Delivery + response tracking</li>
+                <li>1 round of script optimization</li>
+            </ul>
+            <a href="https://buy.stripe.com/fZudRb7ZCcvw6VX8Ba9R603" class="card-cta">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <div class="card-name">Pro Campaign</div>
+            <div class="card-price">$1,499<span> one-time</span></div>
+            <div class="card-desc">Aggressive lead generation</div>
+            <ul class="card-features">
+                <li>5,000 voicemail drops</li>
+                <li>5 custom scripts</li>
+                <li>Male + female voice options</li>
+                <li>Full analytics dashboard</li>
+                <li>Weekly optimization calls</li>
+                <li>Caller ID management</li>
+                <li>DNC list scrubbing</li>
+            </ul>
+            <a href="https://buy.stripe.com/00w6oJfs4dzA801eZy9R604" class="card-cta">Get Started</a>
+        </div>
+        <div class="pricing-card">
+            <div class="card-name">Bundle & Save</div>
+            <div class="card-price">$1,499<span> one-time</span></div>
+            <div class="card-desc">Website + Voicemail = $500 savings</div>
+            <ul class="card-features">
+                <li>Full custom website ($1,000 value)</li>
+                <li>1,500 voicemail drops ($599 value)</li>
+                <li>3 custom scripts</li>
+                <li>Professional voice recording</li>
+                <li>Delivery + response tracking</li>
+                <li>Save $500 vs separate purchase</li>
+            </ul>
+            <a href="https://buy.stripe.com/5kQcN7cfS1QSa8904E9R605" class="card-cta bundle">Get Both & Save</a>
+        </div>
+    </div>
+</section>
+
+<section class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h3>Choose Your Plan</h3>
+                <p>Pick the tier that matches your campaign size — from 500 to 5,000 drops.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h3>We Write Your Script</h3>
+                <p>Our team crafts a compelling, compliant voicemail message tailored to your business and audience.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h3>Professional Recording</h3>
+                <p>Your script is recorded with a professional voice — choose male or female, tone, and pacing.</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+                <h3>Campaign Launch</h3>
+                <p>We deploy your voicemails ringless — straight to voicemail boxes, no ringing phones. Track results in real-time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Ready to Reach More Customers?</h2>
+    <p>Launch your voicemail campaign today and start getting callbacks tomorrow.</p>
+    <div class="cta-buttons">
+        <a href="https://calendly.com/jdsiegel511-webdesigninfos/listing-acquisition-dates" class="cta-btn primary">📅 Book a Consultation</a>
+        <a href="tel:3108501789" class="cta-btn secondary">📞 Call 310-850-1789</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Voicemail Reach by Web Design Info | Redondo Beach, CA</p>
+    <p style="margin-top: 8px;">📞 <a href="tel:3108501789">310-850-1789</a> | 📅 <a href="https://calendly.com/jdsiegel511-webdesigninfos/listing-acquisition-dates">Book a call</a></p>
+</footer>
+
+</body>
+</html>
