@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenstar Electric - Eco-Electric Experts Hawthorne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-space: #101820;
+            --electric-blue: #00D2FF;
+            --glowing-neon: #00F5D4;
+            --soft-slate: #E6F8FF;
+            --gray-text: #4E5E66;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark-space);
+            background: var(--white);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--dark-space);
+            border-bottom: 2px solid var(--electric-blue);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--white);
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+        .nav-logo span { color: var(--electric-blue); }
+        .nav-items {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-items a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-items a:hover { color: var(--glowing-neon); }
+        .tech-cta {
+            border: 2px solid var(--electric-blue);
+            padding: 6px 16px;
+            border-radius: 4px;
+            color: var(--electric-blue) !important;
+            transition: all 0.3s;
+        }
+        .tech-cta:hover {
+            background: var(--electric-blue);
+            color: var(--dark-space) !important;
+        }
+        
+        header {
+            padding: 100px 5% 80px;
+            background: var(--dark-space);
+            color: var(--white);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+        .hero-left-tech h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: 3.8rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
+        .hero-left-tech h1 span { color: var(--glowing-neon); }
+        .hero-left-tech p {
+            font-size: 1.1rem;
+            color: var(--soft-slate);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .hero-grid-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .feat-box-neon {
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .feat-box-neon:hover {
+            border-color: var(--glowing-neon);
+            box-shadow: 0 0 15px rgba(0, 245, 212, 0.2);
+            transform: translateY(-3px);
+        }
+        .feat-box-neon h4 {
+            color: var(--electric-blue);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        
+        .services-tech {
+            padding: 80px 5%;
+            background: var(--soft-slate);
+        }
+        .tech-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2.6rem;
+            letter-spacing: -1px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .services-tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tech-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border-bottom: 4px solid var(--dark-space);
+            transition: all 0.3s;
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.1);
+        }
+        .tech-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-space);
+        }
+        .tech-card p {
+            color: var(--gray-text);
+        }
+        
+        .about-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-text-tech h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .about-text-tech p {
+            font-size: 1.05rem;
+            color: var(--gray-text);
+            margin-bottom: 20px;
+        }
+        .trust-accent-panel {
+            background: var(--dark-space);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid var(--electric-blue);
+        }
+        .trust-accent-panel h3 {
+            font-size: 2.2rem;
+            color: var(--glowing-neon);
+            margin-bottom: 10px;
+        }
+        
+        .tech-contact-section {
+            background: var(--dark-space);
+            color: var(--white);
+            padding: 80px 5%;
+        }
+        .tech-contact-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .tech-contact-left h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .tech-contact-left p {
+            color: var(--soft-slate);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .phone-call-neon {
+            display: inline-block;
+            color: var(--glowing-neon);
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-decoration: none;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+        }
+        .tech-contact-right {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 6px;
+        }
+        .tech-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            margin-bottom: 20px;
+            border-radius: 4px;
+            color: var(--white);
+            font-size: 1rem;
+        }
+        .tech-input:focus {
+            outline: none;
+            border-color: var(--glowing-neon);
+            background: rgba(255,255,255,0.15);
+        }
+        .btn-neon {
+            width: 100%;
+            padding: 15px;
+            background: var(--electric-blue);
+            color: var(--dark-space);
+            border: none;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .btn-neon:hover {
+            background: var(--glowing-neon);
+            box-shadow: 0 0 15px var(--glowing-neon);
+        }
+        
+        footer {
+            background: #080D14;
+            color: #556B73;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.02);
+        }
+        @media (max-width: 992px) {
+            header { grid-template-columns: 1fr; text-align: center; }
+            .about-section { grid-template-columns: 1fr; }
+            .tech-contact-wrap { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-items { display: none; }
+            .hero-left-tech h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-logo">Greenstar <span>Electric</span></a>
+        <ul class="nav-items">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Innovation</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(310) 503-0455" class="tech-cta">Call (310) 503-0455</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-left-tech">
+            <h1>Engineered <span>Smart Power</span> Solutions</h1>
+            <p>Eco-friendly, energy-efficient electrical contracting for residential, industrial, and smart buildings in Hawthorne & Los Angeles County.</p>
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                <a href="#contact" class="btn-neon" style="width:auto; padding:12px 30px;">Get Free Estimate</a>
+            </div>
+        </div>
+        <div class="hero-grid-features">
+            <div class="feat-box-neon">
+                <h4>✓ Certified Experts</h4>
+                <p style="font-size:0.9rem; color:var(--soft-slate)">Licensed C-10 experts specializing in green energy upgrades.</p>
+            </div>
+            <div class="feat-box-neon">
+                <h4>✓ Smart Integration</h4>
+                <p style="font-size:0.9rem; color:var(--soft-slate)">Smart panel retrofitting and advanced automation wiring.</p>
+            </div>
+            <div class="feat-box-neon">
+                <h4>✓ Emergency Crew</h4>
+                <p style="font-size:0.9rem; color:var(--soft-slate)">Rapid dispatch for safety hazards & critical system drops.</p>
+            </div>
+            <div class="feat-box-neon">
+                <h4>✓ Eco-Conscious</h4>
+                <p style="font-size:0.9rem; color:var(--soft-slate)">High-efficiency systems designed to cut your carbon footprint.</p>
+            </div>
+        </div>
+    </header>
+    <section class="services-tech" id="services">
+        <h2 class="tech-title">Industrial & Residential Technical Services</h2>
+        <div class="services-tech-grid">
+            <div class="tech-card">
+                <h3>⚡ Eco-Panel Upgrades</h3>
+                <p>Upgrading obsolete electrical panels to smart, cloud-managed electrical centers that protect appliances and optimize energy consumption.</p>
+            </div>
+            <div class="tech-card">
+                <h3>🔋 Smart EV Charging</h3>
+                <p>Level 2 and DC fast-charging unit integrations for home garages and parking facilities, fully calibrated for green utility profiles.</p>
+            </div>
+            <div class="tech-card">
+                <h3>💡 Architectural Lighting</h3>
+                <p>Modern exterior, workspace, and smart interior ambient lighting design. Fully automated, low-voltage, high-impact arrays.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-section" id="about">
+        <div class="about-text-tech">
+            <h2>The Greenstar Standard in Hawthorne</h2>
+            <p>At Greenstar Electric, we represent the next evolution of electrical systems. Operating locally in Hawthorne and servicing the broader Los Angeles market, we marry classic reliability with contemporary technical solutions.</p>
+            <p>Our focus centers around minimizing power leakages, modernizing legacy systems, and configuring automated controls to create safer, more dynamic property structures. No job is too complex for our engineering team.</p>
+        </div>
+        <div class="trust-accent-panel">
+            <h3>100% C-10</h3>
+            <p style="font-weight:bold; margin-bottom:15px; color:var(--electric-blue);">State-Licensed Contractors</p>
+            <p>We hold valid state licensure and absolute insurance layers to promise safety and accountability on every hawthorne site.</p>
+        </div>
+    </section>
+    <section class="tech-contact-section" id="contact">
+        <div class="tech-contact-wrap">
+            <div class="tech-contact-left">
+                <h2>Ready for an Energy Upgrade?</h2>
+                <p>Initiate standard estimates or activate on-demand technical dispatch for emergency outages.</p>
+                <a href="tel:3105030455" class="phone-call-neon">📞 (310) 503-0455</a>
+                <p>📍 Hawthone Service Base, CA</p>
+                <p>✉ Email: smartpower@greenstarelectric.net</p>
+            </div>
+            <div class="tech-contact-right">
+                <form onsubmit="event.preventDefault(); alert('Energy assessment requested! A technician will coordinate with you.');">
+                    <input type="text" placeholder="Name" class="tech-input" required>
+                    <input type="tel" placeholder="Phone Number" class="tech-input" required>
+                    <textarea class="tech-input" rows="4" placeholder="Briefly describe your panel, lighting, or wiring needs..."></textarea>
+                    <button type="submit" class="btn-neon">Initiate Estimate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Greenstar Electric | Next-Gen C-10 Electrical Contracting, Hawthorne, CA.</p>
+    </footer>
+</body>
+</html>
