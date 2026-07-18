@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Angeles Roofing & Commercial Roof Repair - Professional Roofing in Los Angeles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0B2545;
+            --secondary: #134074;
+            --accent: #8DA9C4;
+            --light-bg: #EEF4F8;
+            --white: #FFFFFF;
+            --dark: #08182B;
+            --text: #2C3E50;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--light-bg);
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(11, 37, 69, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-btn {
+            background: var(--accent);
+            color: var(--primary) !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.2s !important;
+        }
+        .nav-btn:hover {
+            background: var(--white);
+            transform: translateY(-1px);
+        }
+        header {
+            background: radial-gradient(circle at top right, var(--secondary), var(--primary));
+            padding: 100px 5% 80px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            min-height: 600px;
+        }
+        .hero-left {
+            flex: 1.2;
+            max-width: 650px;
+        }
+        .hero-left h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .hero-left p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            color: var(--light-bg);
+            font-weight: 300;
+        }
+        .hero-left .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 32px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .btn-secondary {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 13px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .hero-right {
+            flex: 0.8;
+            background: var(--white);
+            color: var(--dark);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-top: 5px solid var(--accent);
+        }
+        .hero-right h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        .trust-bar {
+            background: var(--white);
+            padding: 25px 5%;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .trust-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .trust-item span { color: var(--accent); font-size: 1.3rem; }
+        .services {
+            padding: 80px 5%;
+            background: var(--white);
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+        }
+        .services-row {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .service-strip {
+            display: flex;
+            background: var(--light-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+        .service-strip:hover {
+            transform: translateX(10px);
+        }
+        .service-icon-box {
+            background: var(--primary);
+            color: var(--white);
+            font-size: 2.5rem;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .service-strip-body {
+            padding: 30px;
+        }
+        .service-strip-body h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        .about {
+            padding: 80px 5%;
+        }
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-content {
+            flex: 1.2;
+        }
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .about-badge-grid {
+            flex: 0.8;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .about-badge {
+            background: var(--white);
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 6px;
+            border-bottom: 4px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .about-badge .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 800;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact {
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 5%;
+        }
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 50px;
+        }
+        .contact-left {
+            flex: 1;
+        }
+        .contact-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .contact-left p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+        .phone-cta-large {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            text-decoration: none;
+            margin-bottom: 30px;
+            font-weight: 800;
+            transition: color 0.3s;
+        }
+        .phone-cta-large:hover { color: var(--accent); }
+        .contact-form {
+            flex: 1;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+        .form-control:focus {
+            outline: 2px solid var(--accent);
+        }
+        .form-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+        .form-btn:hover {
+            background: var(--white);
+        }
+        footer {
+            background: var(--dark);
+            color: var(--accent);
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 992px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+            .hero-left { max-width: 100%; }
+            .hero-left .btn-group { justify-content: center; }
+            .hero-right { width: 100%; max-width: 500px; margin: 0 auto; }
+            .about-container, .contact-container {
+                flex-direction: column;
+            }
+            .about-badge-grid { width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-left h1 { font-size: 2.5rem; }
+            .service-strip { flex-direction: column; }
+            .service-icon-box { width: 100%; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">LA <span>Roof Repair</span></a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:(227) 279-0821" class="nav-btn">Call Now: (227) 279-0821</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-left">
+            <h1>LA's Trusted Commercial & Residential Roofing Experts</h1>
+            <p>Providing Los Angeles and the surrounding Los Angeles area with unparalleled craftsmanship, robust warranty protections, and 24/7 emergency leak responses.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+                <a href="tel:(227) 279-0821" class="btn-secondary">Call (227) 279-0821</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <h3>Quick Estimate Request</h3>
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your request was received.');">
+                <div style="margin-bottom: 15px;">
+                    <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <input type="tel" placeholder="Phone Number" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <select required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+                        <option value="">Select Service</option>
+                        <option value="repair">Roof Repair</option>
+                        <option value="commercial">Commercial Roof</option>
+                        <option value="new">New Installation</option>
+                    </select>
+                </div>
+                <button type="submit" style="width:100%; background:var(--primary); color:white; padding:12px; border:none; border-radius:4px; font-weight:700; cursor:pointer;">Submit Details</button>
+            </form>
+        </div>
+    </header>
+    <section class="trust-bar">
+        <div class="trust-grid">
+            <div class="trust-item"><span>★</span> 5-Star Rated Service</div>
+            <div class="trust-item"><span>✔</span> Licensed & Insured</div>
+            <div class="trust-item"><span>⚡</span> 24/7 Emergency Repairs</div>
+            <div class="trust-item"><span>📍</span> Serving Los Angeles</div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="section-title">Our Roofing Services</h2>
+        <p class="section-subtitle">Crafted for Reliability & Structural Durability</p>
+        <div class="services-row">
+            <div class="service-strip">
+                <div class="service-icon-box">🏠</div>
+                <div class="service-strip-body">
+                    <h4>Residential Roof Repair & Upgrades</h4>
+                    <p>From tile adjustments and direct leak sealing to composite replacement and maintenance, we offer personalized options ensuring your family is secure.</p>
+                </div>
+            </div>
+            <div class="service-strip">
+                <div class="service-icon-box">🏢</div>
+                <div class="service-strip-body">
+                    <h4>Commercial Roof Coatings & Systems</h4>
+                    <p>Protect commercial structures with elite TPO, PVC single-ply, built-up roofing, and specialized silicone coatings designed for flat buildings.</p>
+                </div>
+            </div>
+            <div class="service-strip">
+                <div class="service-icon-box">🛠️</div>
+                <div class="service-strip-body">
+                    <h4>New Roof Installation</h4>
+                    <p>High-end asphalt shingles, robust standing-seam metal systems, and Spanish clay tile roofs installed by factory-certified crews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Protecting Los Angeles Structures with Unwavering Integrity</h2>
+                <p>At Los Angeles Roofing & Commercial Roof Repair, we bring decades of certified experience in residential, industrial, and commercial roofing across Los Angeles. We are a family-owned operation dedicated to putting long-term structural integrity above short-term profit.</p>
+                <p>Our estimators utilize drone technology and physical assessments to design precise, transparent estimates that contain zero surprise costs. We treat your property with complete respect.</p>
+            </div>
+            <div class="about-badge-grid">
+                <div class="about-badge">
+                    <span class="num">15+</span>
+                    Years Experience
+                </div>
+                <div class="about-badge">
+                    <span class="num">100%</span>
+                    Satisfaction Guarantee
+                </div>
+                <div class="about-badge">
+                    <span class="num">2k+</span>
+                    Roofs Completed
+                </div>
+                <div class="about-badge">
+                    <span class="num">Free</span>
+                    Consultations
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <h2>Request Your Free Estimate Today</h2>
+                <p>Connect with our dispatch office immediately to schedule your assessment or trigger emergency repair crews.</p>
+                <a href="tel:2272790821" class="phone-cta-large">📞 (227) 279-0821</a>
+                <p>📍 Location: Los Angeles County Area</p>
+                <p>✉ Email: dispatch@losangelesroofrepair.co</p>
+            </div>
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Estimate request logged! We will call you shortly.');">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" placeholder="Enter Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Notes / Roof Issue</label>
+                        <textarea class="form-control" rows="4" placeholder="Briefly describe what you need..."></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Get Free Estimate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Los Angeles Roofing & Commercial Roof Repair | Professional Roofing Contractor in Los Angeles, CA</p>
+        <p>All Rights Reserved. Licensed, Bonded & Insured (CSLB).</p>
+    </footer>
+</body>
+</html>
