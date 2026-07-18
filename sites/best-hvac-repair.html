@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best HVAC Repair - Five Star Climate Repairs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --warm-rust: #D35400;
+            --orange: #E67E22;
+            --sunflower: #F39C12;
+            --cream-bg: #FFF3E0;
+            --navy-slate: #2C3E50;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--navy-slate);
+            background: var(--cream-bg);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 3px solid var(--orange);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo-orange {
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--warm-rust);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        .brand-logo-orange span { color: var(--sunflower); }
+        .nav-links-orange {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links-orange a {
+            color: var(--navy-slate);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links-orange a:hover { color: var(--orange); }
+        .orange-btn {
+            background: var(--orange);
+            color: var(--white) !important;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
+        .orange-btn:hover {
+            background: var(--warm-rust);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--warm-rust), var(--orange));
+            padding: 120px 20px;
+            text-align: center;
+            color: var(--white);
+        }
+        .hero-frosted-box {
+            max-width: 750px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 50px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+        }
+        .btn-sunset {
+            display: inline-block;
+            background: var(--white);
+            color: var(--warm-rust);
+            padding: 15px 35px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-sunset:hover {
+            transform: scale(1.03);
+            background: var(--cream-bg);
+        }
+        
+        .services-orange {
+            padding: 80px 5%;
+        }
+        .title-orange {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+        .grid-orange {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-orange {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(211,84,0,0.04);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .card-orange:hover {
+            border-color: var(--orange);
+            box-shadow: 0 10px 25px rgba(211,84,0,0.08);
+            transform: translateY(-5px);
+        }
+        .card-orange h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--warm-rust);
+            text-transform: uppercase;
+        }
+        
+        .about-orange {
+            background: var(--white);
+            padding: 80px 5%;
+        }
+        .about-orange-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-orange-left h2 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .about-orange-left p {
+            font-family: 'Merriweather', serif;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        .about-orange-right {
+            background: var(--cream-bg);
+            border: 2px dashed var(--orange);
+            padding: 40px;
+            border-radius: 24px;
+        }
+        .about-orange-right h4 {
+            font-size: 1.6rem;
+            color: var(--warm-rust);
+            margin-bottom: 15px;
+        }
+        
+        .contact-orange {
+            padding: 80px 5%;
+        }
+        .contact-orange-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-orange-left h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .contact-orange-left p {
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .phone-orange-link {
+            color: var(--warm-rust);
+            text-decoration: none;
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .contact-orange-right {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .input-orange {
+            width: 100%;
+            padding: 12px 18px;
+            background: var(--cream-bg);
+            border: 1px solid var(--orange);
+            border-radius: 40px;
+            color: var(--navy-slate);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .input-orange:focus {
+            outline: none;
+            border-color: var(--warm-rust);
+        }
+        
+        footer {
+            background: var(--navy-slate);
+            color: var(--cream-bg);
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        @media (max-width: 992px) {
+            header h1 { font-size: 2.6rem; }
+            .about-orange-inner { grid-template-columns: 1fr; }
+            .contact-orange-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links-orange { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand-logo-orange">Best <span>HVAC Repair</span></a>
+        <ul class="nav-links-orange">
+            <li><a href="#services">Repairs</a></li>
+            <li><a href="#about">The Quality</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(909) 710-7051" class="orange-btn">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-frosted-box">
+            <h1>Complete AC & Heating Solutions</h1>
+            <p>Fast diagnostic inspections, emergency protective repairs, and factory-grade system upgrades in Pomona.</p>
+            <a href="#contact" class="btn-sunset">Book Estimate Now</a>
+        </div>
+    </header>
+    <section class="services-orange" id="services">
+        <h2 class="title-orange">Our Core Services</h2>
+        <div class="grid-orange">
+            <div class="card-orange">
+                <h3>Emergency AC Repair</h3>
+                <p>Isolation of coolant leakages, replacement of damaged compressor capacitors, and precision thermal diagnostics.</p>
+            </div>
+            <div class="card-orange">
+                <h3>Furnace Maintenance</h3>
+                <p>Igniter diagnostics, burner cleanses, and carbon monoxide leakage testing to ensure complete winter heating safety.</p>
+            </div>
+            <div class="card-orange">
+                <h3>Duct Cleanse & Filters</h3>
+                <p>High-efficiency particulate capturing traps, complete allergen filtration retrofits, and dynamic airflow safety audits.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-orange" id="about">
+        <div class="about-orange-inner">
+            <div class="about-orange-left">
+                <h2>Honest, Certified Diagnostics</h2>
+                <p>At Best HVAC Repair, we bring factory-certified standards directly to your residential or commercial structure. Serving Pomona with pride, we isolate the exact root cause of early motor stress or thermostat disconnects.</p>
+                <p>By executing detailed thermodynamic calculations, we prevent you from spending on system replacements when a simple component adjustment or clean will secure comfort.</p>
+            </div>
+            <div class="about-orange-right">
+                <h4>Energy Star Retrofitting</h4>
+                <p style="margin-top:10px; font-size:0.95rem;">Ask how ductless split loops or high efficiency heat pumps can drop your annual Hawthorne power bill by up to 35%.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-orange" id="contact">
+        <div class="contact-orange-inner">
+            <div class="contact-orange-left">
+                <h2>Request Your Free Estimate Today</h2>
+                <p>Connect with our dispatch office immediately to coordinate dates or trigger emergency repair crews.</p>
+                <a href="tel:9097107051" class="phone-orange-link">📞 (909) 710-7051</a>
+                <p>📍 Pomona Service Hub, CA</p>
+                <p>✉ Email: dispatch@besthvacrepair.com</p>
+            </div>
+            <div class="contact-orange-right">
+                <form onsubmit="event.preventDefault(); alert('Technical estimate logged. Our team is coordinating dates.');">
+                    <input type="text" placeholder="Name" class="input-orange" required>
+                    <input type="tel" placeholder="Phone" class="input-orange" required>
+                    <textarea class="input-orange" rows="4" placeholder="Briefly describe what you need..."></textarea>
+                    <button type="submit" class="orange-btn" style="width:100%; border:none; padding:15px; cursor:pointer;">Secure Callback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Best HVAC Repair | Certified EPA HVAC Engineering, Pomona, CA.</p>
+    </footer>
+</body>
+</html>
