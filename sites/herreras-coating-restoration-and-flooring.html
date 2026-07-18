@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herrera's Coating Restoration & Flooring - Artisanal Flooring & Coatings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --earth-brown: #5C5146;
+            --sage-green: #8F9779;
+            --beige-sand: #D4C5B9;
+            --warm-linen: #F5F2EB;
+            --deep-soil: #3E352F;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Proza Libre', sans-serif;
+            color: var(--deep-soil);
+            background: var(--warm-linen);
+            line-height: 1.7;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(245, 242, 235, 0.98);
+            border-bottom: 1px solid var(--beige-sand);
+            padding: 20px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--earth-brown);
+            text-decoration: none;
+        }
+        .brand-serif span { color: var(--sage-green); font-style: italic; }
+        .nav-serif-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-serif-links a {
+            color: var(--earth-brown);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-serif-links a:hover { color: var(--sage-green); }
+        .serif-btn {
+            border: 1px solid var(--earth-brown);
+            padding: 8px 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .serif-btn:hover {
+            background: var(--earth-brown);
+            color: var(--warm-linen) !important;
+        }
+        
+        header {
+            padding: 100px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            background: var(--white);
+            border-bottom: 1px solid var(--beige-sand);
+        }
+        .hero-serif-left {
+            flex: 1.2;
+            max-width: 600px;
+        }
+        .hero-serif-left h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: var(--earth-brown);
+        }
+        .hero-serif-left h1 span { color: var(--sage-green); font-style: italic; }
+        .hero-serif-left p {
+            font-size: 1.05rem;
+            margin-bottom: 35px;
+            color: var(--deep-soil);
+        }
+        .btn-earth {
+            display: inline-block;
+            background: var(--earth-brown);
+            color: var(--warm-linen);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            transition: background 0.3s;
+        }
+        .btn-earth:hover {
+            background: var(--sage-green);
+        }
+        .hero-serif-right {
+            flex: 0.8;
+            border: 1px solid var(--beige-sand);
+            padding: 10px;
+            background: var(--warm-linen);
+        }
+        .hero-right-inner {
+            border: 1px solid var(--beige-sand);
+            padding: 30px;
+            background: var(--white);
+            text-align: center;
+        }
+        .hero-right-inner h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--earth-brown);
+        }
+        
+        .services-linen {
+            padding: 80px 5%;
+        }
+        .sec-title-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--earth-brown);
+            margin-bottom: 10px;
+        }
+        .title-divider-serif {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--sage-green);
+            margin-bottom: 50px;
+        }
+        .grid-linen {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-linen {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid var(--beige-sand);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .card-linen:hover {
+            border-color: var(--sage-green);
+            transform: translateY(-3px);
+        }
+        .card-linen h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--earth-brown);
+            margin-bottom: 15px;
+        }
+        .card-linen p {
+            font-size: 0.95rem;
+            color: #665C54;
+        }
+        
+        .about-linen {
+            background: var(--white);
+            padding: 80px 5%;
+            border-top: 1px solid var(--beige-sand);
+            border-bottom: 1px solid var(--beige-sand);
+        }
+        .about-linen-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-linen-left h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+        }
+        .about-linen-left p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        .about-linen-right {
+            border: 1px solid var(--beige-sand);
+            padding: 30px;
+            background: var(--warm-linen);
+        }
+        .about-linen-right h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--earth-brown);
+            margin-bottom: 10px;
+        }
+        
+        .contact-linen {
+            padding: 80px 5%;
+        }
+        .contact-linen-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+        .contact-linen-left h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--earth-brown);
+            margin-bottom: 20px;
+        }
+        .contact-linen-left p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .phone-linen {
+            display: inline-block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            color: var(--sage-green);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .contact-linen-right {
+            background: var(--white);
+            border: 1px solid var(--beige-sand);
+            padding: 40px;
+        }
+        .input-linen {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--beige-sand);
+            background: var(--warm-linen);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-family: inherit;
+        }
+        .input-linen:focus {
+            outline: none;
+            border-color: var(--sage-green);
+            background: var(--white);
+        }
+        
+        footer {
+            background: var(--deep-soil);
+            color: var(--beige-sand);
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+        }
+        @media (max-width: 992px) {
+            header { flex-direction: column; text-align: center; }
+            .about-linen-inner { grid-template-columns: 1fr; }
+            .contact-linen-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-serif-links { display: none; }
+            .hero-serif-left h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand-serif">Herrera's <span>Flooring</span></a>
+        <ul class="nav-serif-links">
+            <li><a href="#services">The Gallery</a></li>
+            <li><a href="#about">Heritage</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(623) 277-0137" class="serif-btn">Inquire Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-serif-left">
+            <h1>Artisanal <span>Surface Restoration</span> & Luxury Wood Floors</h1>
+            <p>We handcraft fine hardwood installations, custom epoxy coatings, and stone restorations for historic homes and luxury spaces in Lynwood.</p>
+            <a href="#contact" class="btn-earth">Request Private Design Review</a>
+        </div>
+        <div class="hero-serif-right">
+            <div class="hero-right-inner">
+                <h3>Coordinate Site Check</h3>
+                <form onsubmit="event.preventDefault(); alert('Booking coordinator notified. We will call you within 1 business hour.');">
+                    <input type="text" placeholder="Your Name" class="input-linen" style="margin-bottom:12px;" required>
+                    <input type="tel" placeholder="Your Phone Number" class="input-linen" style="margin-bottom:12px;" required>
+                    <button type="submit" class="btn-earth" style="width:100%; border:none; cursor:pointer;">Secure Estimate</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="services-linen" id="services">
+        <h2 class="sec-title-serif">Our Flooring Disciplines</h2>
+        <div class="title-divider-serif">❧</div>
+        <div class="grid-linen">
+            <div class="card-linen">
+                <h3>Elite Hardwood Fitting</h3>
+                <p>Artisanal solid oak installations, chevron patterns, historic parquetry, and fine dustless sanding and oiling procedures.</p>
+            </div>
+            <div class="card-linen">
+                <h3>Industrial Epoxy Coatings</h3>
+                <p>Heavy duty metallic epoxy, decorative flake matrices, and concrete restoration coatings custom polished for showrooms and garages.</p>
+            </div>
+            <div class="card-linen">
+                <h3>Architectural Stone & Tile</h3>
+                <p>Perfect layout alignments of marble, natural slate, geometric terra cotta, and large-format porcelain arrays.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-linen" id="about">
+        <div class="about-linen-inner">
+            <div class="about-linen-left">
+                <h2>Honoring Fine Surfaces</h2>
+                <p>At Herrera's Coating Restoration & Flooring, we approach flooring as a structural canvas. Working in Lynwood and neighboring LA markets, our multi-generational team balances European structural integrity with modern coating science.</p>
+                <p>Whether rescuing highly weathered historic heart pine or applying high-gloss architectural sealants over high-traffic retail concrete, we enforce exceptional standards of patience, testing, and alignment.</p>
+            </div>
+            <div class="about-linen-right">
+                <h4>Certified Green Solutions</h4>
+                <p style="font-size:0.95rem; color:#555; margin-top:10px;">We specialize in using low-VOC, ultra-safe organic finishes and oils that deliver superb surface durability without releasing unsafe odors into your home environment.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-linen" id="contact">
+        <div class="contact-linen-inner">
+            <div class="contact-linen-left">
+                <h2>Plan Your Private Consultation</h2>
+                <p>We are available for on-site wood matching, thickness testing, and detailed subfloor assessments.</p>
+                <a href="tel:6232770137" class="phone-linen">📞 (623) 277-0137</a>
+                <p>📍 Lynwood Restoration Yard, CA</p>
+                <p>✉ Email: studio@herrerasrestoration.com</p>
+            </div>
+            <div class="contact-linen-right">
+                <form onsubmit="event.preventDefault(); alert('Surface project request filed. Our design staff will reach out.');">
+                    <input type="text" placeholder="Name" class="input-linen" required>
+                    <input type="tel" placeholder="Phone" class="input-linen" required>
+                    <textarea class="input-linen" rows="4" placeholder="Briefly share your surface conditions (e.g. concrete slab, old hardwood refinish, etc.)..."></textarea>
+                    <button type="submit" class="btn-earth" style="width:100%; border:none; cursor:pointer;">Initiate Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Herrera's Coating Restoration & Flooring | Certified Fine Hardwood & Epoxy Flooring Specialists, Lynwood, CA.</p>
+    </footer>
+</body>
+</html>
