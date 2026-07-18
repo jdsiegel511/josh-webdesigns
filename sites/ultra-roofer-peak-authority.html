@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Roofer Peak Authority - Peak Authority Roofing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1E1E24;
+            --amber: #FF9F1C;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --slate-gray: #4A4A5A;
+            --amber-hover: #E08600;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--charcoal);
+            background: var(--light-gray);
+            line-height: 1.7;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--charcoal);
+            padding: 20px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--amber);
+        }
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: var(--white);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .logo-text span { color: var(--amber); }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--amber); }
+        .amber-cta {
+            background: var(--amber);
+            color: var(--charcoal) !important;
+            padding: 8px 20px;
+            font-weight: 900 !important;
+        }
+        .amber-cta:hover { background: var(--white); }
+        
+        header {
+            position: relative;
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 120px 5% 150px;
+            overflow: hidden;
+        }
+        .hero-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .hero-left {
+            flex: 1.2;
+        }
+        .hero-left h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+        .hero-left h1 span { color: var(--amber); }
+        .hero-left p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            color: #CCCCCC;
+        }
+        .hero-right {
+            flex: 0.8;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid var(--amber);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .hero-right h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: var(--amber);
+        }
+        .angle-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: var(--light-gray);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0);
+            z-index: 1;
+        }
+        
+        .services {
+            padding: 80px 5%;
+        }
+        .sec-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        .sec-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+        .sec-header h2 span { color: var(--amber); }
+        .stagger-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .stagger-card {
+            background: var(--white);
+            padding: 40px;
+            border: 2px solid var(--charcoal);
+            box-shadow: 6px 6px 0px var(--charcoal);
+            position: relative;
+            transition: all 0.3s;
+        }
+        .stagger-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0px var(--amber);
+        }
+        .card-num {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3rem;
+            color: rgba(255, 159, 28, 0.15);
+        }
+        .stagger-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+        
+        .about {
+            background: var(--charcoal);
+            color: var(--white);
+            padding: 80px 5%;
+        }
+        .about-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-left {
+            flex: 1;
+        }
+        .about-left h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .about-left h2 span { color: var(--amber); }
+        .about-left p {
+            margin-bottom: 25px;
+            color: #BBBBBB;
+            font-size: 1.1rem;
+        }
+        .about-right {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            padding: 30px 20px;
+            border-left: 4px solid var(--amber);
+            text-align: center;
+        }
+        .stat-box h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: var(--amber);
+        }
+        
+        .contact-box {
+            padding: 80px 5%;
+            background: var(--light-gray);
+        }
+        .contact-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--white);
+            border: 3px solid var(--charcoal);
+            display: flex;
+        }
+        .contact-left-info {
+            flex: 1;
+            padding: 50px;
+            background: var(--charcoal);
+            color: var(--white);
+        }
+        .contact-left-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .phone-link-large {
+            color: var(--amber);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.2rem;
+            display: block;
+            margin: 20px 0;
+        }
+        .contact-right-form {
+            flex: 1.2;
+            padding: 50px;
+        }
+        .contact-right-form h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .ultra-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid var(--charcoal);
+            font-size: 1rem;
+        }
+        .ultra-input:focus {
+            outline: none;
+            border-color: var(--amber);
+        }
+        .btn-black {
+            background: var(--charcoal);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+        .btn-black:hover {
+            background: var(--amber);
+            color: var(--charcoal);
+        }
+        
+        footer {
+            background: #111113;
+            color: #777788;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 992px) {
+            .hero-layout { flex-direction: column; }
+            .about-wrap { flex-direction: column; }
+            .contact-grid { flex-direction: column; }
+            .about-right { width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-left h1 { font-size: 2.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo-text">Ultra <span>Roofer</span></a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Our Edge</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:(424) 344-4728" class="nav-links a amber-cta">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-layout">
+            <div class="hero-left">
+                <h1>We Dominate the <span>Peak</span></h1>
+                <p>Advanced commercial and residential roofing built by Los Angeles's certified structural authority. Unwavering service, impenetrable security.</p>
+                <div style="display:flex; gap:15px;">
+                    <a href="#contact" class="btn-black" style="background:var(--amber); color:var(--charcoal);">Get Free Estimate</a>
+                    <a href="tel:(424) 344-4728" class="btn-black" style="background:transparent; border: 2px solid var(--white); color: var(--white);">Call Office</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <h3>Request Instant Callback</h3>
+                <form onsubmit="event.preventDefault(); alert('Request log success! An estimator will dial you back in 5 minutes.');" style="margin-top:20px;">
+                    <input type="text" placeholder="Name" required class="ultra-input" style="background:rgba(255,255,255,0.9); margin-bottom:12px;">
+                    <input type="tel" placeholder="Phone" required class="ultra-input" style="background:rgba(255,255,255,0.9); margin-bottom:12px;">
+                    <button type="submit" class="btn-black" style="width:100%;">Connect with Staff</button>
+                </form>
+            </div>
+        </div>
+        <div class="angle-divider"></div>
+    </header>
+    <section class="services" id="services">
+        <div class="sec-header">
+            <h2>Roofing <span>Authority</span> Services</h2>
+            <p>Our work delivers heavy-duty weather performance, smart climate reflection, and zero-defect installations.</p>
+        </div>
+        <div class="stagger-container">
+            <div class="stagger-card">
+                <div class="card-num">01</div>
+                <h3>Leak Intervention</h3>
+                <p>Using thermal imaging technology to isolate structural moisture instantly, stopping leakage and molding before damage expands.</p>
+            </div>
+            <div class="stagger-card">
+                <div class="card-num">02</div>
+                <h3>Full System Upgrades</h3>
+                <p>Complete removal of dated structures and architectural integration of designer composition, tile, or industrial single-ply systems.</p>
+            </div>
+            <div class="stagger-card">
+                <div class="card-num">03</div>
+                <h3>Commercial flatwork</h3>
+                <p>Superior heat-reflective cool roofs, heavy-duty TPO membranes, and specialized restorations engineered for commercial centers.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-wrap">
+            <div class="about-left">
+                <h2>Engineered with <span>Zero Compromise</span></h2>
+                <p>Ultra Roofer Peak Authority stands as the absolute authority in Los Angeles area roofing. We provide custom calculations for wind loads, drainage solutions, and advanced structural support to guarantee your buildout lasts a lifetime.</p>
+                <p>Every technician completes meticulous certification training. We hold strict manufacturing certifications, allowing us to supply premium manufacturer warranties that other crews cannot match.</p>
+            </div>
+            <div class="about-right">
+                <div class="stat-box">
+                    <h3>20+</h3>
+                    <p>Years Strong</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Insured</p>
+                </div>
+                <div class="stat-box">
+                    <h3>5★</h3>
+                    <p>Google Rating</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Zero</h3>
+                    <p>Surcharges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-box" id="contact">
+        <div class="contact-grid">
+            <div class="contact-left-info">
+                <h3>Contact Our Command Office</h3>
+                <p>Request an immediate estimate or ask critical structural questions directly to our technical estimators.</p>
+                <a href="tel:4243444728" class="phone-link-large">📞 (424) 344-4728</a>
+                <p>📍 Location: Los Angeles, Los Angeles County</p>
+                <p>✉ Email: support@ultrapeakroofing.com</p>
+            </div>
+            <div class="contact-right-form">
+                <h3>Consult An Expert</h3>
+                <form onsubmit="event.preventDefault(); alert('Technical estimate logged. Our team is coordinating dates.');">
+                    <input type="text" placeholder="Your Name" required class="ultra-input">
+                    <input type="tel" placeholder="Your Contact Number" required class="ultra-input">
+                    <textarea placeholder="Tell us about your roof size, issue, or scope of project..." class="ultra-input" rows="4"></textarea>
+                    <button type="submit" class="btn-black">Request Free Estimate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Ultra Roofer Peak Authority | Certified Peak authority roofing contractor. CSLB Bonded.</p>
+    </footer>
+</body>
+</html>
