@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E&R Construction Inc. - Solid Commercial Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --burgundy: #800020;
+            --cream: #F5F2EB;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --dark-roast: #2B1B17;
+            --text-gray: #4A4543;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark-roast);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--burgundy);
+            border-bottom: 4px solid var(--gold);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo-burgundy {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--cream);
+            text-decoration: none;
+        }
+        .brand-logo-burgundy span { color: var(--gold); }
+        .nav-links-burgundy {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links-burgundy a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links-burgundy a:hover { color: var(--gold); }
+        .burgundy-btn {
+            background: var(--gold);
+            color: var(--dark-roast) !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .burgundy-btn:hover {
+            background: var(--white);
+        }
+        
+        header {
+            background: var(--dark-roast);
+            color: var(--cream);
+            padding: 100px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            border-bottom: 10px solid var(--burgundy);
+        }
+        .hero-left-b h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero-left-b h1 span { color: var(--gold); }
+        .hero-left-b p {
+            font-size: 1.15rem;
+            color: var(--cream);
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+        .btn-burgundy {
+            display: inline-block;
+            background: var(--burgundy);
+            color: var(--white);
+            padding: 14px 35px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 2px solid var(--burgundy);
+            transition: all 0.3s;
+        }
+        .btn-burgundy:hover {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        .hero-right-b {
+            background: var(--cream);
+            color: var(--dark-roast);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-left: 5px solid var(--gold);
+            flex: 0.8;
+            max-width: 450px;
+        }
+        .hero-right-b h3 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--burgundy);
+        }
+        
+        .services-burgundy {
+            padding: 80px 5%;
+            background: var(--white);
+        }
+        .sec-title-burgundy {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--burgundy);
+            margin-bottom: 50px;
+        }
+        .grid-burgundy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-burgundy {
+            background: var(--cream);
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 40px 30px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .card-burgundy:hover {
+            background: var(--white);
+            border-color: var(--burgundy);
+            box-shadow: 0 10px 25px rgba(128,0,32,0.08);
+            transform: translateY(-5px);
+        }
+        .card-burgundy h3 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--burgundy);
+        }
+        
+        .about-burgundy {
+            padding: 80px 5%;
+        }
+        .about-burgundy-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-burgundy-left h2 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.6rem;
+            color: var(--burgundy);
+            margin-bottom: 20px;
+        }
+        .about-burgundy-left p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        .about-burgundy-right {
+            background: var(--white);
+            border-top: 5px solid var(--burgundy);
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .about-burgundy-right h4 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.6rem;
+            color: var(--dark-roast);
+            margin-bottom: 10px;
+        }
+        
+        .contact-burgundy {
+            background: var(--burgundy);
+            color: var(--cream);
+            padding: 80px 5%;
+        }
+        .contact-burgundy-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-burgundy-left h2 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        .contact-burgundy-left p {
+            color: var(--cream);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .phone-burgundy-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 2.4rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .contact-burgundy-right {
+            background: var(--dark-roast);
+            padding: 40px;
+            border-radius: 4px;
+            border: 2px solid var(--gold);
+        }
+        .input-burgundy {
+            width: 100%;
+            padding: 12px;
+            background: var(--cream);
+            border: 1px solid var(--burgundy);
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--dark-roast);
+        }
+        .input-burgundy:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        footer {
+            background: #1C1110;
+            color: var(--cream);
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        @media (max-width: 992px) {
+            header { flex-direction: column; text-align: center; }
+            .hero-right-b { width: 100%; margin: 0 auto; }
+            .about-burgundy-inner { grid-template-columns: 1fr; }
+            .contact-burgundy-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links-burgundy { display: none; }
+            .hero-left-b h1 { font-size: 2.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand-logo-burgundy">E&R <span>Construction</span></a>
+        <ul class="nav-links-burgundy">
+            <li><a href="#services">Execution</a></li>
+            <li><a href="#about">Heritage</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(626) 338-8405" class="burgundy-btn">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-left-b">
+            <h1>Industrial Grade <span>General Construction</span> & Civil Builds</h1>
+            <p>Providing Baldwin Park and the greater Los Angeles area with robust structural framing, commercial buildouts, concrete, and ADU additions.</p>
+            <a href="#contact" class="btn-burgundy">Schedule Site Consultation</a>
+        </div>
+        <div class="hero-right-b">
+            <h3>Secure Appointment</h3>
+            <form onsubmit="event.preventDefault(); alert('Appointment requested. A coordination staff member will call you.');" style="margin-top:20px;">
+                <input type="text" placeholder="Name" style="width:100%; padding:12px; border-radius:4px; border:1px solid #ccc; margin-bottom:12px;" required>
+                <input type="tel" placeholder="Phone" style="width:100%; padding:12px; border-radius:4px; border:1px solid #ccc; margin-bottom:12px;" required>
+                <button type="submit" class="btn-burgundy" style="width:100%; border:none; cursor:pointer;">Secure Estimate</button>
+            </form>
+        </div>
+    </header>
+    <section class="services-burgundy" id="services">
+        <h2 class="sec-title-burgundy">Heavy Construction Disciplines</h2>
+        <div class="grid-burgundy">
+            <div class="card-burgundy">
+                <h3>Commercial Buildouts</h3>
+                <p>Retail design planning, drywalling partition frameworks, safety exit adjustments, and specialized tenant improvements completed on time.</p>
+            </div>
+            <div class="card-burgundy">
+                <h3>Structural Concrete</h3>
+                <p>Meticulous steel rebar setups, subgrade grading, concrete foundation pouring, custom driveways, and load bearing structural walls.</p>
+            </div>
+            <div class="card-burgundy">
+                <h3>Heavy Framing & Additions</h3>
+                <p>Precision multi-story framing setups, roof load calculations, and structural timber fitting for additions and accessory dwelling units.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-burgundy" id="about">
+        <div class="about-burgundy-inner">
+            <div class="about-burgundy-left">
+                <h2>Honoring Structural Excellence</h2>
+                <p>At E&R Construction Inc., we bring heavy structural guidelines directly to your Baldwin Park or Los Angeles site. Our crews are trained in strict safety mechanics, advanced blueprints reading, and high durability materials.</p>
+                <p>By enforcing clean site protocols, meticulous grading tests, and strict code compliance, we guarantee your structure is safe, long-lasting, and highly appreciated.</p>
+            </div>
+            <div class="about-burgundy-right">
+                <h4>CSLB Licensed General B</h4>
+                <p style="margin-top:10px; font-size:0.95rem;">We carry a full, unblemished General B License. Bonded and fully insured for large scale commercial structural modifications.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-burgundy" id="contact">
+        <div class="contact-burgundy-inner">
+            <div class="contact-burgundy-left">
+                <h2>Initiate Civil Design Consult</h2>
+                <p>Coordinate site inspections, load assessments, and blueprint planning directly with our estimators.</p>
+                <a href="tel:6263388405" class="phone-burgundy-link">📞 (626) 338-8405</a>
+                <p>📍 Baldwin Park Operations Depot, CA</p>
+                <p>✉ Email: engineering@eandrconstruction.com</p>
+            </div>
+            <div class="contact-burgundy-right">
+                <form onsubmit="event.preventDefault(); alert('Civil project request filed. Our structural estimators will coordinate dates.');">
+                    <input type="text" placeholder="Name" class="input-burgundy" required>
+                    <input type="tel" placeholder="Phone" class="input-burgundy" required>
+                    <textarea class="input-burgundy" rows="4" placeholder="Briefly describe your framing, concrete, or commercial buildout requirements..."></textarea>
+                    <button type="submit" class="btn-burgundy" style="width:100%; border:none; cursor:pointer;">Secure Callback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 E&R Construction Inc. | Certified General Contracting & Engineering, Baldwin Park, CA.</p>
+    </footer>
+</body>
+</html>
