@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPK Electric Inc. - Premium Electrical Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Archivo+Narrow:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #00204A;
+            --gold: #D4AF37;
+            --light-cream: #F5F5F5;
+            --dark-navy: #001026;
+            --text-gray: #555555;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Archivo', sans-serif;
+            color: var(--dark-navy);
+            background: var(--white);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--navy);
+            border-bottom: 4px solid var(--gold);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand-gold {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--white);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .nav-brand-gold span { color: var(--gold); }
+        .nav-items-gold {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-items-gold a {
+            color: var(--white);
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-items-gold a:hover { color: var(--gold); }
+        .gold-pill-btn {
+            background: var(--gold);
+            color: var(--navy) !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 900 !important;
+        }
+        .gold-pill-btn:hover {
+            background: var(--white);
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,32,74,0.92), rgba(0,32,74,0.92)), url('https://images.unsplash.com/photo-1558486012-817176f84c6d?w=1600') no-repeat center/cover;
+            padding: 120px 20px;
+            color: var(--white);
+            text-align: center;
+        }
+        .hero-centered-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gold-vertical-bar {
+            width: 4px;
+            height: 40px;
+            background: var(--gold);
+            margin: 0 auto 20px;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        header h1 span { color: var(--gold); }
+        header p {
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.3rem;
+            color: var(--light-cream);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .btn-gold {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 16px 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 2px solid var(--gold);
+            transition: all 0.3s;
+        }
+        .btn-gold:hover {
+            background: transparent;
+            color: var(--white);
+        }
+        
+        .trust-grid-gold {
+            background: var(--light-cream);
+            padding: 40px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+        .trust-box-gold h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            font-weight: 900;
+        }
+        .trust-box-gold p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        .services-gold {
+            padding: 80px 5%;
+        }
+        .section-title-gold {
+            text-transform: uppercase;
+            font-size: 2.6rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .services-gold-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto 0;
+        }
+        .service-card-gold {
+            background: var(--white);
+            border: 1px solid #E0E0E0;
+            padding: 40px 30px;
+            transition: all 0.3s;
+            border-top: 5px solid var(--navy);
+        }
+        .service-card-gold:hover {
+            border-top-color: var(--gold);
+            box-shadow: 0 10px 20px rgba(0,32,74,0.06);
+            transform: translateY(-5px);
+        }
+        .service-card-gold h3 {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--navy);
+        }
+        .service-card-gold p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+        
+        .about-gold {
+            background: var(--light-cream);
+            padding: 80px 5%;
+        }
+        .about-gold-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-gold-left h2 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .about-gold-left p {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+        .about-gold-right img {
+            width: 100%;
+            border: 8px solid var(--white);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+        
+        .contact-gold {
+            background: var(--navy);
+            color: var(--white);
+            padding: 80px 5%;
+        }
+        .contact-gold-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-gold-left h2 {
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .contact-gold-left p {
+            font-family: 'Archivo Narrow', sans-serif;
+            font-size: 1.2rem;
+            color: var(--light-cream);
+            margin-bottom: 30px;
+        }
+        .phone-gold-btn {
+            display: inline-block;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .contact-gold-right {
+            background: var(--dark-navy);
+            padding: 40px;
+            border: 2px solid var(--gold);
+        }
+        .input-gold {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255,255,255,0.1);
+            background: transparent;
+            color: var(--white);
+            font-size: 1rem;
+        }
+        .input-gold:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        footer {
+            background: var(--dark-navy);
+            color: rgba(255,255,255,0.4);
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        @media (max-width: 768px) {
+            .nav-items-gold { display: none; }
+            header h1 { font-size: 2.4rem; }
+            .about-gold-inner { grid-template-columns: 1fr; }
+            .contact-gold-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-brand-gold">HPK <span>Electric</span></a>
+        <ul class="nav-items-gold">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Corporate</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="tel:(310) 619-3011" class="gold-pill-btn">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-centered-content">
+            <div class="gold-vertical-bar"></div>
+            <h1>Premium <span>C-10 Engineering</span> & Repairs</h1>
+            <p>Industrial performance. Residential precision. Serving Hawthorne & the Greater Los Angeles Area with integrity.</p>
+            <a href="#contact" class="btn-gold">Request Commercial Consultation</a>
+        </div>
+    </header>
+    <section class="trust-grid-gold">
+        <div class="trust-box-gold">
+            <h3>✓ Heavy Power</h3>
+            <p>Substation and industrial board wiring.</p>
+        </div>
+        <div class="trust-box-gold">
+            <h3>✓ Certified Staff</h3>
+            <p>CSLB safety compliance and engineering degrees.</p>
+        </div>
+        <div class="trust-box-gold">
+            <h3>✓ Rapid Mobilization</h3>
+            <p>Emergency dispatch for critical infrastructure.</p>
+        </div>
+        <div class="trust-box-gold">
+            <h3>✓ Custom Designs</h3>
+            <p>Architectural load-balancing & lighting models.</p>
+        </div>
+    </section>
+    <section class="services-gold" id="services">
+        <h2 class="section-title-gold">Commercial & Custom Residential</h2>
+        <div class="services-gold-grid">
+            <div class="service-card-gold">
+                <h3>Industrial Wiring & Panels</h3>
+                <p>Heavy duty panels, main distribution boards, 3-phase machinery setups, and compliance audits for processing, packaging, and commercial plants.</p>
+            </div>
+            <div class="service-card-gold">
+                <h3>Commercial Safety Audits</h3>
+                <p>Meticulous safety code calculations, system risk isolations, circuit restorations, and structured safety certifications for local enterprises.</p>
+            </div>
+            <div class="service-card-gold">
+                <h3>Custom Lighting Designs</h3>
+                <p>High-end low voltage configurations, custom smart building lighting layouts, and multi-zone dimming panel integrations.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-gold" id="about">
+        <div class="about-gold-inner">
+            <div class="about-gold-left">
+                <h2>Precision Power Delivery</h2>
+                <p>HPK Electric Inc. provides licensed electrical consulting and master installation services for commercial structures and luxury residences in Hawthorne and neighboring coastal LA cities.</p>
+                <p>We pride ourselves on our meticulous approach to design and project documentation. By engineering systems to work safely and efficiently under heavy loads, we protect both structures and budgets.</p>
+            </div>
+            <div class="about-gold-right">
+                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=600" alt="Electrical Work">
+            </div>
+        </div>
+    </section>
+    <section class="contact-gold" id="contact">
+        <div class="contact-gold-inner">
+            <div class="contact-gold-left">
+                <h2>Initiate Structural Estimates</h2>
+                <p>Coordinate with our commercial estimation desk to coordinate load checks or site planning.</p>
+                <a href="tel:3106193011" class="phone-gold-btn">📞 (310) 619-3011</a>
+                <p>📍 Location: Hawthorne Engineering Office</p>
+                <p>✉ Email: engineering@hpkelectric.com</p>
+            </div>
+            <div class="contact-gold-right">
+                <form onsubmit="event.preventDefault(); alert('Commercial project request logged! Our engineers will review and call you.');">
+                    <input type="text" placeholder="Corporate/Personal Name" class="input-gold" required>
+                    <input type="tel" placeholder="Contact Phone" class="input-gold" required>
+                    <textarea class="input-gold" rows="4" placeholder="Briefly describe your heavy power, structural layout, or testing project requirements..."></textarea>
+                    <button type="submit" class="btn-gold" style="width:100%;">Submit Proposal Details</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 HPK Electric Inc. | Certified Electrical Engineering & Contracting, Hawthorne, CA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
