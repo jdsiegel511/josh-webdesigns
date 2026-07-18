@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maddox Realty — Custom Website Preview</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, Arial, sans-serif; background: #0a0a0a; }
+.preview-wrapper { filter: blur(8px); pointer-events: none; overflow: hidden; }
+.locked-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.95);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 9999; padding: 20px;
+}
+.locked-overlay .badge {
+    background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3);
+    padding: 6px 16px; border-radius: 20px; margin-bottom: 24px;
+    display: flex; align-items: center; gap: 8px;
+}
+.locked-overlay .badge span { color: #fbbf24; font-size: 14px; }
+.locked-overlay .badge strong { color: #fff; font-size: 12px; letter-spacing: 0.1em; }
+.locked-overlay h1 { color: #fff; font-size: 2rem; text-align: center; margin-bottom: 12px; }
+.locked-overlay p { color: #a0a0a0; font-size: 1rem; text-align: center; max-width: 500px; line-height: 1.7; margin-bottom: 24px; }
+.locked-overlay .price { font-size: 3rem; font-weight: 800; color: #3b82f6; margin-bottom: 4px; }
+.locked-overlay .price-note { color: #6b7280; font-size: 0.85rem; margin-bottom: 28px; }
+.locked-overlay .features { list-style: none; margin-bottom: 32px; max-width: 400px; }
+.locked-overlay .features li { color: #d1d5db; font-size: 0.95rem; padding: 6px 0; display: flex; align-items: center; gap: 10px; }
+.locked-overlay .features li::before { content: "✓"; color: #3b82f6; font-weight: bold; }
+.locked-overlay .cta {
+    display: inline-block; background: #3b82f6; color: #fff;
+    padding: 16px 48px; border-radius: 8px; text-decoration: none;
+    font-size: 1.1rem; font-weight: 700; transition: all 0.2s;
+}
+.locked-overlay .cta:hover { background: #2563eb; transform: translateY(-1px); }
+.locked-overlay .secondary { margin-top: 20px; text-align: center; }
+.locked-overlay .secondary a { color: #6b7280; text-decoration: none; font-size: 0.9rem; }
+.locked-overlay .phone { color: #4b5563; font-size: 0.85rem; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="preview-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maddox Realty — Real Estate Brokerage in Los Angeles</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, Arial, sans-serif; background: #0d1117; color: #f0f6fc; line-height: 1.7; }
+.hero { background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 80px 20px; }
+.hero-content { max-width: 800px; }
+.hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; letter-spacing: -0.03em; }
+.hero h1 span { color: #f97316; }
+.hero p { font-size: 1.3rem; color: #8b949e; margin-bottom: 40px; }
+.hero-cta { display: inline-block; background: #f97316; color: white; padding: 16px 40px; border-radius: 12px; text-decoration: none; font-size: 1.1rem; font-weight: 700; transition: transform 0.2s; }
+.hero-cta:hover { transform: translateY(-3px); }
+.contact-bar { background: #161b22; padding: 24px 40px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.contact-item { display: flex; align-items: center; gap: 8px; color: #f0f6fc; font-size: 1rem; }
+.contact-item a { color: #f97316; text-decoration: none; font-weight: 600; }
+.about { padding: 100px 40px; max-width: 1000px; margin: 0 auto; }
+.about h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 24px; color: #f97316; }
+.about p { font-size: 1.15rem; color: #8b949e; margin-bottom: 16px; }
+.services { padding: 80px 40px; background: #161b22; }
+.services-inner { max-width: 1000px; margin: 0 auto; }
+.services h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 40px; color: #f97316; text-align: center; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.service-item { background: #0d1117; padding: 20px 24px; border-radius: 12px; display: flex; align-items: center; gap: 12px; font-size: 1rem; }
+.service-item .check { color: #f97316; font-weight: 700; font-size: 1.2rem; }
+.areas { padding: 80px 40px; max-width: 1000px; margin: 0 auto; text-align: center; }
+.areas h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 24px; color: #f97316; }
+.areas p { font-size: 1.15rem; color: #8b949e; }
+.cta-section { padding: 100px 40px; text-align: center; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); }
+.cta-section h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 20px; color: #f0f6fc; }
+.cta-section p { font-size: 1.2rem; color: #8b949e; margin-bottom: 40px; }
+.footer { background: #0d1117; padding: 40px; text-align: center; color: #8b949e; border-top: 1px solid #161b22; }
+.footer a { color: #f97316; text-decoration: none; }
+@media (max-width: 768px) { .hero h1 { font-size: 2rem; } .contact-bar { gap: 20px; } }
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Maddox <span>Realty</span></h1>
+        <p>Trusted real estate brokerage serving Los Angeles and the greater Los Angeles area. Professional service, local expertise, and dedicated client care.</p>
+        <a href="tel:3239383601" class="hero-cta">📞 Call (323) 938-3601</a>
+    </div>
+</section>
+
+<div class="contact-bar">
+    <div class="contact-item">📞 <a href="tel:3239383601">(323) 938-3601</a></div>
+    <div class="contact-item">📍 Los Angeles, CA</div>
+    <div class="contact-item">🏢 Real Estate Brokerage</div>
+</div>
+
+<section class="about">
+    <h2>About Maddox Realty</h2>
+    <p>Maddox Realty is a trusted real estate brokerage company based in Los Angeles, California. We provide professional real estate services to property owners, tenants, and investors throughout the greater Los Angeles area.</p>
+    <p>With deep local market knowledge and a commitment to exceptional service, we help our clients navigate the real estate landscape with confidence. Whether you're looking to rent, buy, sell, or manage properties, our team has the expertise to guide you every step of the way.</p>
+    <p>Contact us today to learn how we can help with your real estate needs.</p>
+</section>
+
+<section class="services">
+    <div class="services-inner">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item"><span class="check">✓</span>Property Management</div>
+<div class="service-item"><span class="check">✓</span>Tenant Screening</div>
+<div class="service-item"><span class="check">✓</span>Rent Collection</div>
+<div class="service-item"><span class="check">✓</span>Maintenance & Repairs</div>
+<div class="service-item"><span class="check">✓</span>Lease Agreements</div>
+<div class="service-item"><span class="check">✓</span>Move-in/Move-out Inspections</div>
+
+        </div>
+    </div>
+</section>
+
+<section class="areas">
+    <h2>Service Area</h2>
+    <p>Serving Los Angeles and surrounding communities throughout Los Angeles County. Contact us to find out if we serve your area.</p>
+</section>
+
+<section class="cta-section">
+    <h2>Get in Touch</h2>
+    <p>Ready to get started? Call us today for a free consultation.</p>
+    <a href="tel:3239383601" class="hero-cta">📞 (323) 938-3601</a>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 Maddox Realty — Los Angeles, CA</p>
+    <p style="margin-top:8px;">📞 <a href="tel:3239383601">(323) 938-3601</a></p>
+</footer>
+
+</body>
+</html>
+</div>
+<div class="locked-overlay">
+    <div class="badge"><span>🔒</span> <strong>PREVIEW LOCKED</strong></div>
+    <h1>Your Custom Website Is Ready</h1>
+    <p>Maddox Realty — a fully custom, mobile-responsive website built specifically for your business.</p>
+    <div class="price">$1,000 <span class="price-note">one-time</span></div>
+    <ul class="features">
+        <li>Custom design with your branding</li>
+        <li>Mobile responsive</li>
+        <li>SEO optimized</li>
+        <li>Click-to-call integration</li>
+        <li>No monthly fees — you own it</li>
+    </ul>
+    <a href="https://buy.stripe.com/bJe7sN3Jm8fggwx4kU9R624" class="cta">Unlock Your Website →</a>
+    <div class="secondary">
+        <a href="https://calendly.com/jdsiegel511-webdesigninfos/listing-acquisition-dates" target="_blank">📅 Book a consultation call</a>
+        <div class="phone">Questions? Call Josh: 310-850-1789</div>
+    </div>
+</div>
+</body>
+</html>
