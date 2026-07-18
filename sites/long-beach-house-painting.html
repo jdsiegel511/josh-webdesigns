@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Long Beach House Painting — Painting Services in Long Beach, CA</title>
+<meta name="description" content="Long Beach House Painting provides professional painting services in Long Beach, CA. Call (562) 357-7043 for a free estimate.">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Josefin Sans', sans-serif;color:#333;background:#faf5f0;line-height:1.6;}
+nav{position:sticky;top:0;background:#5d4037;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+nav .logo{color:#fff;font-weight:800;font-size:1.3rem;}
+nav .nav-links a{color:#d7ccc8;text-decoration:none;margin-left:25px;font-size:0.95rem;font-weight:500;transition:color 0.3s;}
+nav .nav-links a:hover{color:#6d4c41;}
+nav .nav-phone{color:#6d4c41;text-decoration:none;font-weight:700;font-size:1rem;}
+.hero{min-height:70vh;}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh;}
+.hero-text{padding:80px 60px;display:flex;flex-direction:column;justify-content:center;background:#faf5f0;}
+.hero-visual{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:60px;}
+.hero-stat{text-align:center;margin:20px 0;}
+.stat-big{font-size:3rem;font-weight:800;color:#fff;display:block;}
+.stat-label{font-size:1rem;color:rgba(255,255,255,0.8);}
+.hero-badge{display:inline-block;background:#bcaaa430;color:#5d4037;padding:6px 16px;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:20px;}
+.hero-badge-light{display:inline-block;background:rgba(255,255,255,0.2);color:#fff;padding:6px 16px;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:20px;}
+.hero h1{font-size:3rem;font-weight:800;color:#5d4037;margin-bottom:15px;line-height:1.1;}
+.hero-tagline{font-size:1.2rem;color:#666;margin-bottom:30px;max-width:500px;}
+.hero-tagline-light{font-size:1.3rem;color:#d7ccc8;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto;}
+.hero-cta,.hero-cta-centered{display:flex;gap:15px;flex-wrap:wrap;align-items:center;}
+.hero-cta-centered{justify-content:center;}
+.btn-primary{background:#6d4c41;color:#fff;padding:14px 36px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform 0.3s;}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-secondary{background:transparent;color:#5d4037;border:2px solid #5d4037;padding:12px 34px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;}
+.btn-light{background:#6d4c41;color:#fff;padding:14px 36px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1.1rem;}
+.btn-outline-light{background:transparent;color:#fff;border:2px solid #fff;padding:12px 34px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1.1rem;}
+.hero-centered{padding:100px 20px;text-align:center;}
+.hero-content-centered{max-width:800px;margin:0 auto;}
+.hero-fullwidth{padding:100px 20px;text-align:center;}
+.hero-content-full{max-width:800px;margin:0 auto;padding-bottom:40px;}
+.hero-bar{margin-top:40px;}
+.hero-angled{padding:0;}
+.hero-angled-bg{padding:120px 20px;text-align:center;min-height:60vh;display:flex;flex-direction:column;justify-content:center;}
+.hero-angled-content{max-width:700px;margin:0 auto;}
+.section{padding:80px 20px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-title{font-size:2.2rem;font-weight:800;color:#5d4037;text-align:center;margin-bottom:15px;}
+.section-subtitle{text-align:center;color:#888;font-size:1.1rem;margin-bottom:50px;max-width:600px;margin-left:auto;margin-right:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.service-card:hover{transform:translateY(-6px);}
+.about{background:linear-gradient(135deg,#5d4037,#bcaaa4);padding:80px 20px;}
+.about-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.about h2{font-size:2rem;color:#fff;margin-bottom:20px;}
+.about p{color:rgba(255,255,255,0.9);font-size:1.1rem;line-height:1.8;margin-bottom:15px;}
+.stats-row{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap;}
+.stat-item{color:#fff;}
+.stat-item strong{font-size:2.5rem;font-weight:800;display:block;}
+.stat-item span{font-size:0.95rem;color:rgba(255,255,255,0.7);}
+.why-us{padding:80px 20px;background:#faf5f0;}
+.why-us-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;max-width:1200px;margin:0 auto;}
+.why-card{text-align:center;padding:30px;}
+.why-card .why-icon{width:60px;height:60px;background:#bcaaa415;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 15px;}
+.why-card h3{color:#5d4037;font-size:1.2rem;margin-bottom:8px;}
+.why-card p{color:#888;font-size:0.95rem;}
+.contact{background:#5d4037;padding:80px 20px;}
+.contact-inner{max-width:800px;margin:0 auto;text-align:center;}
+.contact h2{color:#fff;font-size:2.2rem;margin-bottom:15px;}
+.contact p{color:#d7ccc8;font-size:1.1rem;margin-bottom:40px;}
+.contact-phone{display:inline-block;background:#6d4c41;color:#fff;padding:18px 50px;border-radius:50px;text-decoration:none;font-size:1.3rem;font-weight:700;margin-bottom:30px;}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:600px;margin:0 auto;text-align:left;}
+.contact-form input,.contact-form textarea,.contact-form select{padding:14px;border:none;border-radius:8px;font-family:'Josefin Sans', sans-serif;font-size:1rem;width:100%;}
+.contact-form textarea{grid-column:1/-1;min-height:120px;resize:vertical;}
+.contact-form button{grid-column:1/-1;background:#6d4c41;color:#fff;padding:16px;border:none;border-radius:8px;font-size:1.1rem;font-weight:700;cursor:pointer;font-family:'Josefin Sans', sans-serif;}
+footer{background:rgba(0,0,0,0.9);padding:40px 20px;text-align:center;}
+footer h3{color:#fff;font-size:1.3rem;margin-bottom:10px;}
+footer p{color:rgba(255,255,255,0.6);font-size:0.9rem;margin:5px 0;}
+footer a{color:#6d4c41;text-decoration:none;}
+@media(max-width:768px){
+.hero-split{grid-template-columns:1fr;}
+.hero-text{padding:50px 25px;text-align:center;}
+.hero-visual{padding:40px;min-height:200px;}
+.hero h1{font-size:2rem;}
+.about-inner{grid-template-columns:1fr;text-align:center;}
+.contact-form{grid-template-columns:1fr;}
+nav{flex-direction:column;gap:10px;}
+nav .nav-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+nav .nav-links a{margin:0;}
+}
+</style>
+</head>
+<body>
+<nav>
+    <a href="#" class="logo">Long</a>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:562357-7043" class="nav-phone">(562) 357-7043</a>
+</nav>
+
+
+        <section class="hero hero-fullwidth" style="background:#5d4037;">
+            <div class="hero-content-full">
+                <h1 style="color:#fff;font-size:3.5rem;">Long Beach House Painting</h1>
+                <p style="color:#d7ccc8;font-size:1.3rem;max-width:600px;">Your trusted painting contractor serving Long Beach and the greater LA area.</p>
+                <div class="hero-cta-row">
+                    <a href="tel:562357-7043" style="background:#6d4c41;color:#fff;padding:16px 40px;border-radius:4px;text-decoration:none;font-size:1.1rem;font-weight:700;display:inline-block;">📞 Call Now: (562) 357-7043</a>
+                </div>
+            </div>
+            <div class="hero-bar" style="background:#bcaaa4;padding:20px;text-align:center;">
+                <span style="color:#fff;font-size:1.1rem;font-weight:600;">Licensed • Insured • Free Estimates</span>
+            </div>
+        </section>
+
+<section class="section" id="services">
+    <div class="section-inner">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Professional painting services for homes and businesses in Long Beach and surrounding areas.</p>
+        <div class="services-grid">
+            
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:4px solid #bcaaa4;">
+            <div class="service-icon" style="width:50px;height:50px;background:#bcaaa420;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🔨</div>
+            <h3 style="color:#5d4037;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Interior Painting</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Rooms, ceilings, trim, and doors</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:4px solid #bcaaa4;">
+            <div class="service-icon" style="width:50px;height:50px;background:#bcaaa420;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">⚡</div>
+            <h3 style="color:#5d4037;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Exterior Painting</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Full exterior house painting</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:4px solid #bcaaa4;">
+            <div class="service-icon" style="width:50px;height:50px;background:#bcaaa420;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🛠️</div>
+            <h3 style="color:#5d4037;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Cabinet Refinishing</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Kitchen cabinet painting and refinishing</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:4px solid #bcaaa4;">
+            <div class="service-icon" style="width:50px;height:50px;background:#bcaaa420;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🏠</div>
+            <h3 style="color:#5d4037;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Drywall Repair</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Patch, texture, and drywall installation</p>
+        </div>
+        <div class="service-card" style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.08);transition:transform 0.3s;border-top:4px solid #bcaaa4;">
+            <div class="service-icon" style="width:50px;height:50px;background:#bcaaa420;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;">🚧</div>
+            <h3 style="color:#5d4037;font-size:1.3rem;margin:0 0 10px;font-weight:700;">Color Consultation</h3>
+            <p style="color:#666;line-height:1.6;margin:0;">Free color selection and design advice</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-inner">
+        <div>
+            <h2>About Long Beach House Painting</h2>
+            <p>We are a locally owned and operated painting business serving Long Beach and the greater Los Angeles area. With years of experience, we deliver quality workmanship on every project.</p>
+            <p>From small repairs to full installations, we handle it all. Licensed, insured, and committed to customer satisfaction.</p>
+            <div class="stats-row">
+                <div class="stat-item"><strong>100+</strong><span>Projects Completed</span></div>
+                <div class="stat-item"><strong>5★</strong><span>Customer Rating</span></div>
+                <div class="stat-item"><strong>24/7</strong><span>Available</span></div>
+            </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#bcaaa4,#d7ccc8);min-height:300px;border-radius:20px;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:#fff;">
+                <div style="font-size:4rem;margin-bottom:10px;">🔨</div>
+                <p style="font-size:1.2rem;font-weight:600;">Serving Long Beach</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-us">
+    <div class="section-inner">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="why-us-grid">
+            <div class="why-card"><div class="why-icon">⭐</div><h3>Licensed & Insured</h3><p>Fully licensed and insured for your protection</p></div>
+            <div class="why-card"><div class="why-icon">🚀</div><h3>Fast Response</h3><p>Quick turnaround and emergency service available</p></div>
+            <div class="why-card"><div class="why-icon">💰</div><h3>Free Estimates</h3><p>No-obligation quotes on all projects</p></div>
+            <div class="why-card"><div class="why-icon">✅</div><h3>Quality Work</h3><p>Precision workmanship on every single job</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <h2>Get Your Free Quote</h2>
+        <p>Call us now or fill out the form below — we'll get back to you within 24 hours.</p>
+        <a href="tel:562357-7043" class="contact-phone">📞 (562) 357-7043</a>
+        <form class="contact-form" onsubmit="event.preventDefault();alert('Thank you! We will contact you shortly.');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address" style="grid-column:1/-1;" required>
+            <select style="grid-column:1/-1;"><option>Select a Service</option><option>Interior Painting</option><option>Exterior Painting</option><option>Cabinet Refinishing</option><option>Drywall Repair</option><option>Color Consultation</option></select>
+            <textarea placeholder="Tell us about your project..." required></textarea>
+            <button type="submit">Request Free Quote</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <h3>Long Beach House Painting</h3>
+    <p>Painting Services • Long Beach, CA</p>
+    <p>📞 <a href="tel:562357-7043">(562) 357-7043</a></p>
+    <p>Licensed • Insured • Free Estimates</p>
+</footer>
+</body>
+</html>
