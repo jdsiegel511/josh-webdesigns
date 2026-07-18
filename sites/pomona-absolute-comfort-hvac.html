@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomona Absolute Comfort HVAC - Professional Air Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Quicksand', sans-serif; color: #374151; background: #ecfdf5; line-height: 1.6; }
+        
+        /* Nav */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #d1fae5;
+        }
+        .logo { font-family: 'Cabin', sans-serif; font-size: 1.5rem; font-weight: 700; color: #059669; }
+        nav a { text-decoration: none; color: #4b5563; margin-left: 20px; font-weight: 700; }
+        nav a:hover { color: #059669; }
+        .nav-phone { color: #059669 !important; border: 2px solid #059669; padding: 6px 14px; border-radius: 30px; }
+
+        /* Elegant Nested Rounded Card Hero */
+        .hero-outer { padding: 40px 5% 20px; background: #ecfdf5; }
+        .hero {
+            background: #ffffff; border-radius: 40px; padding: 80px 5%; text-align: center;
+            box-shadow: 0 15px 35px rgba(5, 150, 105, 0.05); border: 2px solid #d1fae5;
+        }
+        .hero h1 { font-family: 'Cabin', sans-serif; font-size: 3.5rem; color: #111827; line-height: 1.15; margin-bottom: 20px; }
+        .hero h1 span { color: #059669; }
+        .hero p { font-size: 1.15rem; color: #4b5563; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-cta { display: inline-block; background: #059669; color: white; text-decoration: none; padding: 15px 35px; border-radius: 30px; font-family: 'Cabin', sans-serif; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2); transition: all 0.3s; }
+        .hero-cta:hover { background: #10b981; transform: translateY(-2px); }
+
+        /* Trust bar simple */
+        .trust-bar { text-align: center; padding: 25px; font-weight: 700; color: #059669; background: #ecfdf5; font-size: 1.05rem; }
+
+        /* Services Grid of tilt cards */
+        .services { padding: 90px 5%; background: white; border-top-left-radius: 40px; border-top-right-radius: 40px; }
+        .sec-title { text-align: center; font-family: 'Cabin', sans-serif; font-size: 2.3rem; color: #111827; margin-bottom: 50px; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+        .service-card { background: #f0fdf4; border-radius: 20px; padding: 40px 30px; transition: all 0.3s; border: 1px solid #d1fae5; }
+        .service-card:hover { transform: translateY(-5px) rotate(1deg); border-color: #059669; }
+        .service-icon { background: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.1); }
+        .service-card h3 { font-family: 'Cabin', sans-serif; font-size: 1.35rem; color: #111827; margin-bottom: 12px; }
+        .service-card p { color: #4b5563; font-size: 0.95rem; }
+
+        /* About & Pill Stats */
+        .about { padding: 90px 5%; background: #ecfdf5; }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+        .about-text h2 { font-family: 'Cabin', sans-serif; font-size: 2.3rem; color: #111827; margin-bottom: 20px; }
+        .about-text p { color: #4b5563; margin-bottom: 20px; font-size: 1.05rem; }
+        .pill-stats { display: flex; flex-direction: column; gap: 15px; }
+        .stat-pill { background: white; border: 1px solid #d1fae5; border-radius: 50px; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.02); }
+        .stat-pill span { font-family: 'Cabin', sans-serif; font-weight: 700; font-size: 1.4rem; color: #059669; }
+
+        /* Contact Section Friendly Glass Form */
+        .contact { padding: 90px 5%; background: white; }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-left h2 { font-family: 'Cabin', sans-serif; font-size: 2.3rem; color: #111827; margin-bottom: 20px; }
+        .contact-left p { color: #4b5563; margin-bottom: 30px; }
+        .phone-button { display: inline-block; background: #059669; color: white; padding: 14px 28px; border-radius: 30px; font-family: 'Cabin', sans-serif; font-weight: 700; font-size: 1.3rem; text-decoration: none; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.2); transition: all 0.3s; }
+        .phone-button:hover { background: #10b981; transform: translateY(-2px); }
+        
+        .contact-form { background: #f0fdf4; border: 1px solid #d1fae5; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(5, 150, 105, 0.05); }
+        .contact-form h3 { font-family: 'Cabin', sans-serif; font-size: 1.5rem; color: #111827; margin-bottom: 20px; }
+        .form-control { width: 100%; padding: 13px; margin-bottom: 15px; border: 1.5px solid #d1fae5; background: white; border-radius: 30px; font-family: inherit; padding-left: 20px; }
+        .form-control:focus { outline: none; border-color: #059669; }
+        .btn-submit { display: block; width: 100%; background: #059669; border: none; padding: 14px; border-radius: 30px; color: white; font-family: 'Cabin', sans-serif; font-weight: 700; cursor: pointer; transition: background 0.3s; }
+        .btn-submit:hover { background: #10b981; }
+
+        /* Footer */
+        footer { background: #1f2937; color: #9ca3af; padding: 40px 5%; text-align: center; border-top-left-radius: 40px; border-top-right-radius: 40px; }
+        footer a { color: #10b981; text-decoration: none; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero { border-radius: 20px; padding: 40px 20px; }
+            .services { border-radius: 20px; }
+            .about-inner, .contact-inner { grid-template-columns: 1fr; }
+            footer { border-radius: 20px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PomonaComfort</div>
+        <nav>
+            <a href="#services">Air Care</a>
+            <a href="#about">Tenure</a>
+            <a href="tel:19097842817" class="nav-phone">(909) 784-2817</a>
+        </nav>
+    </header>
+
+    <div class="hero-outer">
+        <section class="hero">
+            <h1>Absolute Heating & Cooling <span>Done Right</span></h1>
+            <p>We craft high efficiency climates. Pomona's most friendly and certified diagnostic team is on-call for same-day cooling repairs.</p>
+            <a href="tel:19097842817" class="hero-cta">Claim Free Comfort Survey</a>
+        </section>
+    </div>
+
+    <div class="trust-bar">
+        ✓ EPA Licensed Systems • Upfront flat estimates • Guaranteed indoor satisfaction
+    </div>
+
+    <section id="services" class="services">
+        <h2 class="sec-title">Our Comfort Offerings</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>AC Repair & Recharge</h3>
+                <p>Solving hot rooms, system blockages, and coolant leaks immediately with flat-rate diagnostic billing and full warranty coverage.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💨</div>
+                <h3>Duct Sealing & Filtering</h3>
+                <p>Improve air cleanliness. We design high density air filtration systems, remove dust, and seal leaky duct channels.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>Heat Pump Tune-Ups</h3>
+                <p>Year-round HVAC performance. We swap filters, balance thermostat calibrations, and optimize heat exchanges for winter energy savings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>The Absolute Comfort Guarantee</h2>
+                <p>Pomona Absolute Comfort HVAC provides top-tier home climate control with transparent practices. Our licensed crew treats your property with professional care.</p>
+                <p>We work with smart technology layouts, integrating energy efficient thermostats and cooling systems to optimize your monthly utility bills.</p>
+            </div>
+            <div class="pill-stats">
+                <div class="stat-pill">
+                    <p>EPA Certification Rating:</p>
+                    <span>Class A</span>
+                </div>
+                <div class="stat-pill">
+                    <p>Happy Customer Reviews:</p>
+                    <span>1,500+</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <h2>Got Cooling Troubles?</h2>
+                <p>Submit your AC concerns on the right, or speak immediately with our friendly Pomona-based dispatchers.</p>
+                <a href="tel:19097842817" class="phone-button">Call (909) 784-2817</a>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('We have received your estimate request and will schedule a home visit.');">
+                    <h3>Request Home Survey</h3>
+                    <input type="text" class="form-control" placeholder="Contact Name" required>
+                    <input type="tel" class="form-control" placeholder="Callback Phone" required>
+                    <textarea class="form-control" placeholder="Climate Needs (e.g. New AC)" rows="3"></textarea>
+                    <button type="submit" class="btn-submit">Request Free Survey</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pomona Absolute Comfort HVAC. Pomona, CA. EPA Licensed Air Technicians.</p>
+    </footer>
+</body>
+</html>
