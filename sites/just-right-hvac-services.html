@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Right HVAC Services - Pomona Heating & Cooling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: #1f2937; background: #ffffff; line-height: 1.6; }
+        
+        /* Nav */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: #111827; }
+        .logo span { color: #dc2626; }
+        nav a { text-decoration: none; color: #4b5563; margin-left: 20px; font-weight: 600; }
+        nav a:hover { color: #dc2626; }
+        .nav-cta { background: #dc2626; color: white !important; padding: 10px 20px; border-radius: 6px; }
+
+        /* Split Hero */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 550px;
+            background: #111827;
+            color: white;
+        }
+        .hero-left {
+            padding: 80px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero h1 { font-family: 'Poppins', sans-serif; font-size: 3.2rem; line-height: 1.15; font-weight: 700; margin-bottom: 20px; }
+        .hero h1 span { color: #ef4444; }
+        .hero p { font-size: 1.15rem; color: #9ca3af; margin-bottom: 30px; }
+        .hero-buttons { display: flex; gap: 15px; }
+        .btn-red { display: inline-block; background: #dc2626; color: white; text-decoration: none; padding: 14px 28px; border-radius: 6px; font-weight: 700; font-family: 'Poppins', sans-serif; transition: all 0.3s; }
+        .btn-red:hover { background: #ef4444; }
+        .btn-outline { display: inline-block; border: 2px solid #4b5563; color: white; text-decoration: none; padding: 12px 26px; border-radius: 6px; font-weight: 700; font-family: 'Poppins', sans-serif; transition: all 0.3s; }
+        .btn-outline:hover { background: #4b5563; }
+        
+        .hero-right {
+            background: radial-gradient(circle at center, #1f2937, #111827);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 4px solid #dc2626;
+        }
+        .hero-graphic {
+            text-align: center;
+            border: 2px dashed rgba(239, 68, 68, 0.4);
+            padding: 40px;
+            border-radius: 12px;
+            background: rgba(220, 38, 38, 0.05);
+        }
+        .hero-graphic-num { font-size: 4rem; font-weight: 700; color: #ef4444; line-height: 1; }
+
+        /* Trust bar */
+        .trust { background: #f3f4f6; padding: 20px 5%; text-align: center; }
+        .trust-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .trust-card { font-family: 'Poppins', sans-serif; font-weight: 600; color: #374151; }
+
+        /* Services alternating layout */
+        .services { padding: 90px 5%; background: #ffffff; }
+        .section-title { text-align: center; font-family: 'Poppins', sans-serif; font-size: 2.3rem; margin-bottom: 60px; }
+        .service-row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; max-width: 1100px; margin: 0 auto 50px; align-items: center; }
+        .service-row:nth-child(even) { grid-template-columns: 1.2fr 1fr; }
+        .service-row:nth-child(even) .service-img-placeholder { order: 2; }
+        .service-img-placeholder { background: #f3f4f6; border-left: 8px solid #dc2626; padding: 40px; border-radius: 8px; text-align: center; }
+        .service-row h3 { font-family: 'Poppins', sans-serif; font-size: 1.6rem; color: #111827; margin-bottom: 15px; }
+        .service-row p { color: #4b5563; margin-bottom: 20px; }
+        .service-list { list-style: none; }
+        .service-list li { margin-bottom: 8px; font-weight: 600; color: #374151; }
+        .service-list li::before { content: '✔️ '; color: #dc2626; }
+
+        /* About Stats */
+        .about { background: #111827; color: white; padding: 90px 5%; }
+        .about-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about h2 { font-family: 'Poppins', sans-serif; font-size: 2.3rem; margin-bottom: 20px; color: #ef4444; }
+        .about-p { color: #d1d5db; font-size: 1.1rem; margin-bottom: 20px; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .stat-card { background: #1f2937; padding: 30px; border-radius: 8px; text-align: center; border-bottom: 4px solid #dc2626; }
+        .stat-card span { font-size: 2.5rem; font-weight: 700; color: #fff; }
+
+        /* Contact Section */
+        .contact { padding: 90px 5%; background: #fff; }
+        .contact-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-left h2 { font-family: 'Poppins', sans-serif; font-size: 2.3rem; margin-bottom: 20px; }
+        .contact-left p { color: #4b5563; margin-bottom: 30px; }
+        .call-card { background: #f9fafb; border: 2px solid #e5e7eb; border-left: 6px solid #dc2626; padding: 30px; border-radius: 8px; }
+        .call-card h4 { font-family: 'Poppins', sans-serif; color: #9ca3af; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .call-card a { font-size: 2.2rem; font-weight: 700; color: #dc2626; text-decoration: none; }
+        
+        .contact-form { background: #111827; color: white; padding: 40px; border-radius: 12px; border: 2px solid #dc2626; }
+        .contact-form h3 { font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 20px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.85rem; }
+        .form-input { width: 100%; padding: 12px; background: #1f2937; border: 1px solid #4b5563; border-radius: 6px; color: white; font-family: inherit; }
+        .form-input:focus { outline: none; border-color: #ef4444; }
+        .btn-submit { display: block; width: 100%; background: #dc2626; border: none; padding: 14px; border-radius: 6px; color: white; font-weight: 700; font-family: 'Poppins', sans-serif; cursor: pointer; transition: background 0.3s; }
+        .btn-submit:hover { background: #ef4444; }
+
+        /* Footer */
+        footer { background: #111827; border-top: 10px solid #dc2626; color: #9ca3af; padding: 40px 5%; text-align: center; }
+        footer a { color: #ef4444; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero, .about-grid, .contact-grid, .service-row, .service-row:nth-child(even) { grid-template-columns: 1fr; }
+            .hero-right { display: none; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">JustRight <span>HVAC</span></div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="tel:19098586289" class="nav-cta">(909) 858-6289</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Just Right Heating & Air <span>Done Fast</span></h1>
+            <p>We believe in honest solutions and premium indoor comfort. Pomona's most trusted HVAC service specialists are ready for your call.</p>
+            <div class="hero-buttons">
+                <a href="tel:19098586289" class="btn-red">Call (909) 858-6289</a>
+                <a href="#contact" class="btn-outline">Schedule Online</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-graphic">
+                <div class="hero-graphic-num">24/7</div>
+                <p style="color: #9ca3af; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Service Dispatch</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust">
+        <div class="trust-grid">
+            <div class="trust-card">✓ Licensed & Insured</div>
+            <div class="trust-card">✓ No Hidden Fees</div>
+            <div class="trust-card">✓ Guaranteed Workmanship</div>
+        </div>
+    </div>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Professional Pomona HVAC Services</h2>
+        
+        <div class="service-row">
+            <div class="service-img-placeholder">
+                <span style="font-size: 3rem;">❄️</span>
+            </div>
+            <div>
+                <h3>Central AC Repairs</h3>
+                <p>No matter the issue — system cycling constantly, refrigerant leaks, electrical issues — we have the specialized diagnostics tools to fix it correctly on the first visit.</p>
+                <ul class="service-list">
+                    <li>Emergency Repair Response</li>
+                    <li>Leak Detection & Charging</li>
+                    <li>Fan Motor & Compressor Work</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-row">
+            <div>
+                <h3>Energy Efficient Installations</h3>
+                <p>Upgrade to a modern high-efficiency HVAC model. We tailor every install to your home's thermal footprint, saving you money on utility bills.</p>
+                <ul class="service-list">
+                    <li>Heat Pumps & Dual Fuel</li>
+                    <li>Smart Thermostat Integration</li>
+                    <li>Duct Design & Sealing</li>
+                </ul>
+            </div>
+            <div class="service-img-placeholder">
+                <span style="font-size: 3rem;">🔥</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div>
+                <h2>The Just Right HVAC Standard</h2>
+                <p class="about-p">For over a decade, we've lived by a simple rule: do the job right. We don't cut corners and we never upsell services you don't need.</p>
+                <p class="about-p">We serve residential and commercial properties in Pomona, CA with high-performance cooling and heating configurations. Customer satisfaction is our highest metric of success.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>100%</span>
+                    <p style="color: #ef4444; font-weight: 600;">Warranty Covered</p>
+                </div>
+                <div class="stat-card">
+                    <span>15+</span>
+                    <p style="color: #ef4444; font-weight: 600;">Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-grid">
+            <div class="contact-left">
+                <h2>Got HVAC Problems?</h2>
+                <p>Our friendly customer support is here to assist. Fill out the form or give us a direct call for lightning-fast responses.</p>
+                <div class="call-card">
+                    <h4>Speak with a Specialist</h4>
+                    <a href="tel:19098586289">(909) 858-6289</a>
+                </div>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent! We will connect with you immediately.');">
+                    <h3>Request an Estimate</h3>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Phone Number</label>
+                        <input type="tel" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Details of Project</label>
+                        <textarea class="form-input" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Just Right HVAC Services. Pomona, CA. | Licensed HVAC Contractors.</p>
+    </footer>
+</body>
+</html>
