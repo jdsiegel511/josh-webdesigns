@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Trofeos Professional Installations - Precision Home Fittings</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #2E0854;
+            --magenta: #9F2B68;
+            --lavender: #E6E6FA;
+            --cream: #FDFBF7;
+            --dark-violet: #120224;
+            --gold: #FFD23F;
+            --text-dark: #2A1F3D;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--purple);
+            border-bottom: 3px solid var(--magenta);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo-purple {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--cream);
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        .brand-logo-purple span { color: var(--gold); }
+        .nav-links-purple {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links-purple a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links-purple a:hover { color: var(--gold); }
+        .purple-btn {
+            background: var(--gold);
+            color: var(--purple) !important;
+            padding: 8px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+        .purple-btn:hover {
+            background: var(--cream);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--dark-violet), var(--purple));
+            color: var(--cream);
+            padding: 100px 5% 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-left-p h1 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 3.8rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+        .hero-left-p h1 span { color: var(--gold); }
+        .hero-left-p p {
+            font-size: 1.15rem;
+            color: var(--lavender);
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+        .btn-magenta {
+            display: inline-block;
+            background: var(--magenta);
+            color: var(--cream);
+            padding: 15px 35px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(159, 43, 104, 0.4);
+        }
+        .btn-magenta:hover {
+            background: var(--gold);
+            color: var(--purple);
+            transform: translateY(-2px);
+        }
+        .hero-right-p {
+            background: var(--cream);
+            color: var(--dark-violet);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            flex: 0.8;
+            max-width: 450px;
+        }
+        .hero-right-p h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--purple);
+        }
+        
+        .services-purple {
+            padding: 80px 5%;
+        }
+        .title-purple {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            font-size: 2.8rem;
+            text-align: center;
+            letter-spacing: -1px;
+            margin-bottom: 50px;
+        }
+        .grid-purple {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card-purple {
+            background: var(--cream);
+            border: 2px solid var(--lavender);
+            padding: 40px 30px;
+            border-radius: 24px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .card-purple:hover {
+            background: var(--white);
+            border-color: var(--magenta);
+            box-shadow: 0 10px 25px rgba(46,8,84,0.08);
+            transform: translateY(-5px);
+        }
+        .card-purple h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--purple);
+        }
+        
+        .about-purple {
+            background: var(--lavender);
+            padding: 80px 5%;
+        }
+        .about-purple-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .about-purple-left h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 2.6rem;
+            margin-bottom: 20px;
+        }
+        .about-purple-left p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+        .about-purple-right {
+            background: var(--purple);
+            color: var(--cream);
+            padding: 45px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(46,8,84,0.15);
+        }
+        .about-purple-right h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .contact-purple {
+            background: var(--purple);
+            color: var(--cream);
+            padding: 80px 5%;
+        }
+        .contact-purple-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-purple-left h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        .contact-purple-left p {
+            color: var(--lavender);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .phone-purple-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .contact-purple-right {
+            background: var(--dark-violet);
+            padding: 40px;
+            border-radius: 24px;
+            border: 2px solid var(--magenta);
+        }
+        .input-purple {
+            width: 100%;
+            padding: 12px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--magenta);
+            border-radius: 12px;
+            color: var(--cream);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .input-purple:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        footer {
+            background: var(--dark-violet);
+            color: rgba(255,255,255,0.4);
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        @media (max-width: 992px) {
+            header { flex-direction: column; text-align: center; }
+            .hero-right-p { width: 100%; margin: 0 auto; }
+            .about-purple-inner { grid-template-columns: 1fr; }
+            .contact-purple-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links-purple { display: none; }
+            .hero-left-p h1 { font-size: 2.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="brand-logo-purple">El Trofeos <span>Installations</span></a>
+        <ul class="nav-links-purple">
+            <li><a href="#services">Fittings</a></li>
+            <li><a href="#about">The Quality</a></li>
+            <li><a href="#contact">Consultation</a></li>
+            <li><a href="tel:(323) 214-9260" class="purple-btn">Call Now</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero-left-p">
+            <h1>Master <span>Home Installations</span> & Fine Trim Joinery</h1>
+            <p>Providing Lynwood and the Los Angeles area with flawless door hanging, cabinet mounting, architectural moldings, and luxury appliance integrations.</p>
+            <a href="#contact" class="btn-magenta">Request Fast Callback</a>
+        </div>
+        <div class="hero-right-p">
+            <h3>Coordinate Appointment</h3>
+            <form onsubmit="event.preventDefault(); alert('Appointment requested. A scheduling staff member will call you.');" style="margin-top:20px;">
+                <input type="text" placeholder="Name" style="width:100%; padding:12px; border-radius:12px; border:1px solid #ccc; margin-bottom:12px;" required>
+                <input type="tel" placeholder="Phone" style="width:100%; padding:12px; border-radius:12px; border:1px solid #ccc; margin-bottom:12px;" required>
+                <button type="submit" class="btn-magenta" style="width:100%; border:none; cursor:pointer;">Book Estimate</button>
+            </form>
+        </div>
+    </header>
+    <section class="services-purple" id="services">
+        <h2 class="title-purple">Flawless Fitment Services</h2>
+        <div class="grid-purple">
+            <div class="card-purple">
+                <h3>Cabinet & Trim Joinery</h3>
+                <p>Cabinet assembly and mounting, finish trim, crown moldings, wainscoting, and dynamic closet integrations customized for perfect fit.</p>
+            </div>
+            <div class="card-purple">
+                <h3>Doors & Windows</h3>
+                <p>Meticulous framing and hanging of solid wood interior doors, exterior safety entries, patio slides, and architectural casing elements.</p>
+            </div>
+            <div class="card-purple">
+                <h3>Fine Art & Fixture Hanging</h3>
+                <p>Secure structural wall anchoring of large-scale mirrors, designer wall art arrays, television mounts, and high-end drapery tracks.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-purple" id="about">
+        <div class="about-purple-inner">
+            <div class="about-purple-left">
+                <h2>The Art of the Perfect Fit</h2>
+                <p>At El Trofeos Professional Installations, we know that minor misalignments ruin high-end materials. Serving residential and retail sites in Lynwood and neighboring communities, we deliver extreme structural precision.</p>
+                <p>Whether correcting warped framing before hanging heavy custom doors or mounting kitchen cabinetry with absolute laser precision, our technicians execute to standard millimeters. No crooked edges, no loose anchors.</p>
+            </div>
+            <div class="about-purple-right">
+                <h4>Our Satisfaction Oath</h4>
+                <p style="margin-top:10px; font-size:0.95rem;">Every anchor we drive is structurally rated for its load. We respect your architecture, enforce clean safety guidelines, and leave your property absolutely pristine.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-purple" id="contact">
+        <div class="contact-purple-inner">
+            <div class="contact-purple-left">
+                <h2>Initiate Fitting Requests</h2>
+                <p>Send details about your cabinets, custom doors, moldings, or appliance specs to our estimators.</p>
+                <a href="tel:3232149260" class="phone-purple-link">📞 (323) 214-9260</a>
+                <p>📍 Lynwood Fitment Headquarters, CA</p>
+                <p>✉ Email: dispatch@eltrofeosinstall.com</p>
+            </div>
+            <div class="contact-purple-right">
+                <form onsubmit="event.preventDefault(); alert('Installation scope recorded. Our team will contact you shortly.');">
+                    <input type="text" placeholder="Name" class="input-purple" required>
+                    <input type="tel" placeholder="Phone" class="input-purple" required>
+                    <textarea class="input-purple" rows="4" placeholder="Briefly describe what appliances, doors, or cabinetry you need hanging or mounted..."></textarea>
+                    <button type="submit" class="btn-magenta" style="width:100%; border:none; cursor:pointer;">Secure Callback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 El Trofeos Professional Installations | Certified Professional Home Installations & Carpentry, Lynwood, CA.</p>
+    </footer>
+</body>
+</html>
