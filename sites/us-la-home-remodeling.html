@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US LA Home Remodeling — Professional home remodeling in Woodland Hills</title>
+    <meta name="description" content="US LA Home Remodeling offers professional home remodeling services in Woodland Hills. Kitchen remodeling, bathroom renovations, home additions. Licensed & insured. Free estimates.">
+    <link href="https://fonts.googleapis.com/css2?family=Earth:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Bricolage Grotesque', sans-serif; color: #333; line-height: 1.6; background: #fef3c7; }
+        
+        .hero { display: flex; } .hero-split { display: flex; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; } .hero-text { flex: 1; } .hero-image { flex: 1; border-radius: 16px; overflow: hidden; } .hero-image img { width: 100%; height: 400px; object-fit: cover; }
+        .hero {
+            background: linear-gradient(135deg, #292524 0%, #44403c 100%);
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=1600');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; font-weight: 800; letter-spacing: -1px; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; margin-bottom: 30px; }
+        .hero-badge {
+            display: inline-block;
+            background: #d97706;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero-ctas { display: flex; gap: 15px; flex-wrap: wrap; }
+        .cta-button {
+            display: inline-block;
+            background: #d97706;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover { transform: translateY(-2px); }
+        .cta-button-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border: 2px solid white;
+            transition: all 0.2s;
+        }
+        .cta-button-secondary:hover { background: white; color: #44403c; }
+        
+        .trust-bar { background: white; padding: 25px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .trust-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.95rem; color: #555; }
+        .trust-item strong { color: #44403c; }
+        
+        .stats { padding: 60px 20px; background: #44403c; color: white; }
+        .stats-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 2.5rem; font-weight: 800; color: #d97706; }
+        .stat-label { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+        
+        .services { padding: 70px 20px; }
+        .section-title { text-align: center; font-size: 2.2rem; color: #44403c; margin-bottom: 10px; font-weight: 800; }
+        .section-subtitle { text-align: center; color: #777; margin-bottom: 50px; font-size: 1.1rem; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 30px;
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-color: #d97706; }
+        .service-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: #44403c; font-weight: 700; }
+        .service-card p { color: #666; font-size: 0.95rem; }
+        
+        .gallery { padding: 70px 20px; background: white; }
+        .gallery-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item { border-radius: 10px; overflow: hidden; height: 200px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        
+        .about { padding: 70px 20px; }
+        .about-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+        .about h2 { font-size: 2rem; color: #44403c; margin-bottom: 20px; font-weight: 800; }
+        .about p { font-size: 1.1rem; color: #555; margin-bottom: 15px; line-height: 1.8; }
+        
+        .testimonials { padding: 70px 20px; background: white; }
+        .testimonials-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .testimonial-card { background: #fef3c7; border-radius: 12px; padding: 30px; border-left: 4px solid #d97706; }
+        .testimonial-card p { color: #555; font-size: 1rem; margin-bottom: 15px; font-style: italic; }
+        .testimonial-author { font-weight: 700; color: #44403c; }
+        .stars { color: #d97706; margin-bottom: 10px; font-size: 1.1rem; }
+        
+        .contact { padding: 70px 20px; background: #44403c; color: white; }
+        .contact-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+        .contact h2 { font-size: 2.2rem; margin-bottom: 20px; font-weight: 800; }
+        .contact p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+        .contact-phone { font-size: 2rem; font-weight: 800; color: #d97706; text-decoration: none; display: block; margin-bottom: 20px; }
+        .contact-form { background: white; border-radius: 12px; padding: 30px; text-align: left; }
+        .contact-form label { display: block; margin-bottom: 5px; color: #333; font-weight: 600; font-size: 0.9rem; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd;
+            border-radius: 8px; font-family: inherit; font-size: 1rem;
+        }
+        .contact-form button {
+            background: #d97706; color: white; border: none; padding: 15px 40px;
+            border-radius: 8px; font-size: 1.05rem; font-weight: 700; cursor: pointer; width: 100%;
+        }
+        
+        .footer { background: #111; color: #888; padding: 30px 20px; text-align: center; font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-ctas { flex-direction: column; }
+            .cta-button, .cta-button-secondary { width: 100%; text-align: center; }
+            .hero-split { flex-direction: column; }
+            .hero-image { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: #44403c; padding: 15px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: white; font-weight: 800; font-size: 1.3rem;">US LA Home Remodeling</span>
+            <a href="tel:8005080259" style="color: #d97706; text-decoration: none; font-weight: 700;">(800) 508-0259</a>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        
+        <div class="hero-split">
+            <div class="hero-text">
+                <span class="hero-badge">Licensed & Insured</span>
+                <h1>Transform Your Home with US LA Home Remodeling</h1>
+                <p>Premier home remodeling services in Woodland Hills. From concept to completion, we bring your vision to life.</p>
+                <div class="hero-ctas">
+                    <a href="tel:8005080259" class="cta-button">Call Now: (800) 508-0259</a>
+                    <a href="#contact" class="cta-button-secondary">Get Free Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=1600" alt="US LA Home Remodeling Remodeling Project">
+            </div>
+        </div>
+    </section>
+    
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item"><strong>✓</strong> Licensed & Insured</div>
+            <div class="trust-item"><strong>✓</strong> Free Estimates</div>
+            <div class="trust-item"><strong>✓</strong> 15+ Years Experience</div>
+            <div class="trust-item"><strong>✓</strong> 5-Star Rated</div>
+        </div>
+    </div>
+    
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Projects Done</div></div><div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Support</div></div><div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years Experience</div></div>
+        </div>
+    </section>
+    
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Complete home remodeling solutions for your home</p>
+        <div class="services-grid">
+            
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>Interior Renovation</h3>
+            <p>Full interior remodeling including flooring, painting, lighting, and custom finishes.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🪟</div>
+            <h3>Custom Features</h3>
+            <p>Built-in shelving, custom mantels, wainscoting, and unique architectural details.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Kitchen Remodeling</h3>
+            <p>Complete kitchen renovations with custom cabinetry, modern countertops, and premium appliances.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Home Additions</h3>
+            <p>Expand your living space with seamless room additions, second stories, and ADUs.</p>
+        </div>
+        </div>
+    </section>
+    
+    <section class="gallery">
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-subtitle">See our craftsmanship in action</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600" alt="Kitchen Remodel"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Bathroom Renovation"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503387762-94ce3ed67006?w=600" alt="Living Room"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Home Addition"></div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="about-inner">
+            <h2>About US LA Home Remodeling</h2>
+            <p>We are Woodland Hills's trusted home remodeling specialists. For over 15 years, we've been transforming homes with quality craftsmanship, attention to detail, and exceptional customer service.</p>
+            <p>From kitchen and bathroom remodels to whole-house renovations and room additions, we handle every project with the same level of care and professionalism. Our team works closely with you from design to completion, ensuring your vision becomes reality.</p>
+            <p>Licensed, insured, and committed to your satisfaction. Call us today for a free estimate.</p>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Don't just take our word for it</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Absolutely amazing work! They transformed our outdated kitchen into a modern masterpiece. On time and on budget."</p>
+                <div class="testimonial-author">— Sarah M., Woodland Hills</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Professional from start to finish. The bathroom remodel exceeded our expectations. Highly recommend!"</p>
+                <div class="testimonial-author">— James T., Woodland Hills</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Best remodeling experience we've had. Honest pricing, quality work, and they cleaned up every day."</p>
+                <div class="testimonial-author">— Maria L., Woodland Hills</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <h2>Ready to Start Your Remodel?</h2>
+            <p>Call now for a free consultation and estimate. Let's make your dream home a reality.</p>
+            <a href="tel:8005080259" class="contact-phone">📞 (800) 508-0259</a>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will call you shortly.');">
+                <label>Your Name</label>
+                <input type="text" placeholder="John Smith" required>
+                <label>Phone Number</label>
+                <input type="tel" placeholder="(555) 123-4567" required>
+                <label>Project Details</label>
+                <textarea rows="4" placeholder="Tell us about your remodeling project..." required></textarea>
+                <button type="submit">Request Free Quote →</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2026 US LA Home Remodeling | home remodeling in Woodland Hills | (800) 508-0259</p>
+        <p style="margin-top: 8px; opacity: 0.6;">Licensed & Insured — Serving Woodland Hills and surrounding areas</p>
+    </footer>
+</body>
+</html>
