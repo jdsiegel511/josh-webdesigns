@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Fence - Carson Premier Fence Installers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Archivo', sans-serif; color: #1e293b; background: #f8fafc; line-height: 1.6; }
+        
+        /* Nav */
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: #1e3a8a; border-bottom: 4px solid #22c55e;
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Josefin Sans', sans-serif; font-size: 1.6rem; font-weight: 700; color: #ffffff; }
+        .logo span { color: #22c55e; }
+        nav a { text-decoration: none; color: #cbd5e1; margin-left: 20px; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        nav a:hover { color: #22c55e; }
+        .nav-phone { background: #22c55e; color: #1e3a8a !important; padding: 8px 16px; border-radius: 4px; font-weight: 700; }
+
+        /* Full Viewport Grid Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(23, 37, 84, 0.98) 100%), url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=1600') center/cover;
+            padding: 120px 5%; color: white; text-align: center;
+        }
+        .hero-inner { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-family: 'Josefin Sans', sans-serif; font-size: 4rem; text-transform: uppercase; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 span { color: #22c55e; }
+        .hero p { font-size: 1.2rem; color: #cbd5e1; margin-bottom: 35px; }
+        .hero-btn { display: inline-block; background: #22c55e; color: #1e3a8a; text-decoration: none; padding: 15px 35px; border-radius: 4px; font-family: 'Josefin Sans', sans-serif; font-weight: 700; text-transform: uppercase; transition: all 0.3s; }
+        .hero-btn:hover { background: #15803d; color: white; }
+
+        /* Trust bar simple deep blue */
+        .trust { background: #1e3a8a; color: white; border-bottom: 3px solid #22c55e; text-align: center; padding: 18px; font-family: 'Josefin Sans', sans-serif; font-size: 1.1rem; text-transform: uppercase; }
+
+        /* Services tall fence-post cards */
+        .services { padding: 90px 5%; background: white; }
+        .sec-title { text-align: center; font-family: 'Josefin Sans', sans-serif; font-size: 2.5rem; color: #1e3a8a; margin-bottom: 50px; }
+        .services-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: #f8fafc; border: 2px solid #cbd5e1; border-top-left-radius: 30px; border-top-right-radius: 30px; padding: 45px 30px; transition: all 0.3s; text-align: center; }
+        .service-card:hover { border-color: #22c55e; background: #eff6ff; transform: translateY(-5px); }
+        .service-icon { background: #e0f2fe; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 20px; color: #1e3a8a; }
+        .service-card h3 { font-family: 'Josefin Sans', sans-serif; font-size: 1.4rem; color: #1e3a8a; margin-bottom: 15px; }
+        .service-card p { color: #475569; font-size: 0.95rem; }
+
+        /* About & Stats section area diagram */
+        .about { padding: 90px 5%; background: #eff6ff; }
+        .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+        .about-text h2 { font-family: 'Josefin Sans', sans-serif; font-size: 2.3rem; color: #1e3a8a; margin-bottom: 20px; }
+        .about-text p { color: #475569; margin-bottom: 20px; font-size: 1.05rem; }
+        .stats-diagram { background: white; border: 2px solid #cbd5e1; border-radius: 8px; padding: 30px; }
+        .diagram-row { display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
+        .diagram-row:last-child { border: none; margin: 0; padding: 0; }
+        .diagram-lbl { font-family: 'Josefin Sans', sans-serif; font-weight: 700; color: #1e3a8a; }
+        .diagram-val { color: #22c55e; font-weight: 700; }
+
+        /* Contact Section with bright green form */
+        .contact { padding: 90px 5%; background: white; }
+        .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; }
+        .contact-left h2 { font-family: 'Josefin Sans', sans-serif; font-size: 2.3rem; color: #1e3a8a; margin-bottom: 20px; }
+        .contact-left p { color: #475569; margin-bottom: 30px; }
+        .phone-button { display: inline-block; background: #1e3a8a; color: white; padding: 14px 28px; border-radius: 4px; font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 1.3rem; text-decoration: none; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2); transition: all 0.3s; }
+        .phone-button:hover { background: #15803d; }
+        
+        .contact-form { background: #1e3a8a; color: white; padding: 40px; border-radius: 8px; border-right: 8px solid #22c55e; }
+        .contact-form h3 { font-family: 'Josefin Sans', sans-serif; font-size: 1.5rem; color: #22c55e; margin-bottom: 20px; text-transform: uppercase; }
+        .form-control { width: 100%; padding: 12px; margin-bottom: 15px; border: 1.5px solid #cbd5e1; background: #f8fafc; border-radius: 4px; font-family: inherit; color: #1e293b; }
+        .form-control:focus { outline: none; border-color: #22c55e; }
+        .btn-submit { display: block; width: 100%; background: #22c55e; border: none; padding: 14px; border-radius: 4px; color: #1e3a8a; font-family: 'Josefin Sans', sans-serif; font-weight: 700; cursor: pointer; text-transform: uppercase; transition: background 0.3s; }
+        .btn-submit:hover { background: white; }
+
+        /* Footer */
+        footer { background: #0f172a; color: #64748b; padding: 40px 5%; text-align: center; border-top: 4px solid #1e3a8a; }
+        footer a { color: #22c55e; text-decoration: none; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-inner, .contact-inner { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Precision<span>Fence</span></div>
+        <nav>
+            <a href="#services">Layouts</a>
+            <a href="#about">Tenure</a>
+            <a href="tel:13106440169" class="nav-phone">(310) 644-0169</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <h1>Premium Timber, Vinyl & <span>Secured Chain Link Fences</span></h1>
+            <p>Carson's trusted contracting crew for professional boundary layouts, privacy fencing, custom wood gates, and repairs.</p>
+            <a href="tel:13106440169" class="hero-btn">Get Free Boundary Survey</a>
+        </div>
+    </section>
+
+    <div class="trust">
+        ✓ Fully licensed Carson fencing experts • premium grade lumber • certified security posts
+    </div>
+
+    <section id="services" class="services">
+        <h2 class="sec-title">Our Boundary Offerings</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🪵</div>
+                <h3>Artisanal Wood Fence</h3>
+                <p>Constructed with premium California Redwood or cedar. Post-aligned, wind-rated framing, custom vertical dog-ear caps, and elegant staining.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>Vinyl & Security Gates</h3>
+                <p>Maintenance-free privacy vinyl posts with reinforced aluminum frames, customized swing or roll-gate systems, and child-safe lock keys.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⛓️</div>
+                <h3>Commercial Chain Link</h3>
+                <p>Heavy duty galvanized steel chain mesh fences with top rail support configurations, privacy slats, and barb-wire additions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <h2>The Carson Standard In Security</h2>
+                <p>Precision Fence delivers structural fence lines and luxury boundary gates configured to withstand high winds and age deterioration.</p>
+                <p>We work systematically, locating underground utilities before any post-hole drilling begins, pouring heavy cement anchors, and using hot-dipped galvanized fasteners to prevent ugly rust stains.</p>
+            </div>
+            <div class="stats-diagram">
+                <div class="diagram-row">
+                    <span class="diagram-lbl">Standard Post Concrete Depth:</span>
+                    <span class="diagram-val">24 Inches</span>
+                </div>
+                <div class="diagram-row">
+                    <span class="diagram-lbl">Fastener Standard:</span>
+                    <span class="diagram-val">Hot Galvanized</span>
+                </div>
+                <div class="diagram-row">
+                    <span class="diagram-lbl">Warranted Years:</span>
+                    <span class="diagram-val">10-Year Rust Free</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <h2>Secure Your Home Boundaries</h2>
+                <p>Get flat transparent quotes on custom cedar structures, chain links, or vinyl boundaries. Speak directly with our Carson post engineers.</p>
+                <a href="tel:13106440169" class="phone-button">Call (310) 644-0169</a>
+            </div>
+            <div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('We have received your boundary details and will provide a measurements quote.');">
+                    <h3>Secure Measurements Quote</h3>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="tel" class="form-control" placeholder="Callback Phone" required>
+                    <input type="text" class="form-control" placeholder="Est. length in linear feet (e.g. 120ft)" required>
+                    <button type="submit" class="btn-submit">Request Measurements</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Precision Fence. Carson, CA. Licensed Fencing Contractors.</p>
+    </footer>
+</body>
+</html>
